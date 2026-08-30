@@ -1,0 +1,280 @@
+{
+ "ner": {
+  "documents": 800,
+  "strict": {
+   "precision": 0.7412288843512159,
+   "recall": 0.9199400990669278,
+   "f1": 0.8209714726291442
+  },
+  "typed": {
+   "precision": 0.9988448654268223,
+   "recall": 0.9983835584805449,
+   "f1": 0.9986141586788313
+  },
+  "per_label": {
+   "ACCOUNT": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 245
+   },
+   "AGENCY": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 156
+   },
+   "ALIAS": {
+    "precision": 1.0,
+    "recall": 0.9949494949494949,
+    "f1": 0.9974683544303797,
+    "support": 396
+   },
+   "CONTRABAND": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 122
+   },
+   "DATE": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 800
+   },
+   "GPE": {
+    "precision": 0.9990783410138249,
+    "recall": 1.0,
+    "f1": 0.9995389580451821,
+    "support": 1084
+   },
+   "LOC": {
+    "precision": 1.0,
+    "recall": 0.9882478632478633,
+    "f1": 0.9940891993551854,
+    "support": 936
+   },
+   "MONEY": {
+    "precision": 0.9856115107913669,
+    "recall": 1.0,
+    "f1": 0.9927536231884058,
+    "support": 548
+   },
+   "ORG": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 464
+   },
+   "PERSON": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 2385
+   },
+   "PHONE": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 422
+   },
+   "POLICE_STATION": {
+    "precision": 0.9987484355444305,
+    "recall": 0.9987484355444305,
+    "f1": 0.9987484355444305,
+    "support": 799
+   },
+   "QUANTITY": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 50
+   },
+   "VEHICLE_MODEL": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 72
+   },
+   "VEHICLE_REG": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 182
+   }
+  }
+ },
+ "network_analytics": {
+  "influence_vs_ANY_KEY_PLAYER": {
+   "precision@10": 1.0,
+   "recall@10": 0.1176,
+   "precision@25": 1.0,
+   "recall@25": 0.2941,
+   "precision@50": 1.0,
+   "recall@50": 0.5882,
+   "precision@100": 0.78,
+   "recall@100": 0.9176,
+   "average_precision": 0.9417
+  },
+  "command_vs_KINGPIN": {
+   "precision@10": 0.4,
+   "recall@10": 0.2353,
+   "precision@25": 0.44,
+   "recall@25": 0.6471,
+   "precision@50": 0.34,
+   "recall@50": 1.0,
+   "precision@100": 0.17,
+   "recall@100": 1.0,
+   "average_precision": 0.4805
+  },
+  "command_vs_LIEUTENANT": {
+   "precision@10": 0.6,
+   "recall@10": 0.1304,
+   "precision@25": 0.56,
+   "recall@25": 0.3043,
+   "precision@50": 0.66,
+   "recall@50": 0.7174,
+   "precision@100": 0.46,
+   "recall@100": 1.0,
+   "average_precision": 0.625
+  },
+  "broker_vs_BROKER": {
+   "precision@10": 0.1,
+   "recall@10": 0.0455,
+   "precision@25": 0.32,
+   "recall@25": 0.3636,
+   "precision@50": 0.32,
+   "recall@50": 0.7273,
+   "precision@100": 0.17,
+   "recall@100": 0.7727,
+   "average_precision": 0.2611
+  },
+  "community_detection": {
+   "adjusted_rand_index": 0.8375,
+   "normalized_mutual_info": 0.8617,
+   "communities_found": 29,
+   "syndicates_planted": 15,
+   "modularity": 0.8195
+  }
+ },
+ "entity_resolution": {
+  "LOW": {
+   "true_duplicates_found": 109,
+   "true_duplicates_missed": 1,
+   "recall": 0.9909,
+   "namesakes_escalated": 13,
+   "namesakes_total": 84,
+   "namesake_escalation_rate": 0.1548,
+   "precision_against_labelled_pairs": 0.8934,
+   "f1": 0.9397,
+   "total_flagged_pairs": 229
+  },
+  "MEDIUM": {
+   "true_duplicates_found": 109,
+   "true_duplicates_missed": 1,
+   "recall": 0.9909,
+   "namesakes_escalated": 0,
+   "namesakes_total": 84,
+   "namesake_escalation_rate": 0.0,
+   "precision_against_labelled_pairs": 1.0,
+   "f1": 0.9954,
+   "total_flagged_pairs": 116
+  },
+  "HIGH": {
+   "true_duplicates_found": 76,
+   "true_duplicates_missed": 34,
+   "recall": 0.6909,
+   "namesakes_escalated": 0,
+   "namesakes_total": 84,
+   "namesake_escalation_rate": 0.0,
+   "precision_against_labelled_pairs": 1.0,
+   "f1": 0.8172,
+   "total_flagged_pairs": 76
+  },
+  "blocking_recall": 0.9909,
+  "auto_merges_performed": 0
+ },
+ "anomalies": {
+  "BURNER_SIM_ROTATION": {
+   "planted": 42,
+   "detected": 26,
+   "recall": 0.619,
+   "findings_raised": 338
+  },
+  "DORMANT_REACTIVATION": {
+   "planted": 45,
+   "detected": 45,
+   "recall": 1.0,
+   "findings_raised": 229
+  },
+  "LAYERING_CHAIN": {
+   "planted": 55,
+   "detected": 48,
+   "recall": 0.8727,
+   "findings_raised": 58
+  },
+  "MULE_FANOUT": {
+   "planted": 40,
+   "detected": 40,
+   "recall": 1.0,
+   "findings_raised": 30
+  },
+  "PRE_INCIDENT_CALL_BURST": {
+   "planted": 97,
+   "detected": 97,
+   "recall": 1.0,
+   "findings_raised": 97
+  },
+  "ROUND_TRIPPING": {
+   "planted": 25,
+   "detected": 25,
+   "recall": 1.0,
+   "findings_raised": 25
+  },
+  "STRUCTURING_SMURFING": {
+   "planted": 70,
+   "detected": 70,
+   "recall": 1.0,
+   "findings_raised": 69
+  },
+  "_overall": {
+   "planted": 374,
+   "detected": 351,
+   "recall": 0.9385,
+   "total_findings": 846
+  }
+ },
+ "hidden_links": {
+  "CO_LOCATION": {
+   "planted": 120,
+   "found": 120,
+   "found_as_evidential": 120,
+   "recall": 1.0
+  },
+  "SHARED_BANK_ACCOUNT": {
+   "planted": 28,
+   "found": 28,
+   "found_as_evidential": 28,
+   "recall": 1.0
+  },
+  "SHARED_HANDSET_IMEI": {
+   "planted": 35,
+   "found": 35,
+   "found_as_evidential": 35,
+   "recall": 1.0
+  },
+  "SHARED_VEHICLE": {
+   "planted": 29,
+   "found": 28,
+   "found_as_evidential": 28,
+   "recall": 0.9655
+  },
+  "_overall": {
+   "planted": 212,
+   "found": 211,
+   "recall": 0.9953,
+   "total_candidates_raised": 4659,
+   "evidential_candidates": 4353
+  }
+ }
+}

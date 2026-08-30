@@ -1,0 +1,174 @@
+{
+  "dataset_name": "Synthetic Indian Criminal Network Dataset (SICND)",
+  "version": "1.0",
+  "generated_at": "2026-08-31T01:08:24",
+  "seed": 42,
+  "synthetic": true,
+  "disclaimer": "Fully synthetic. No real person, organisation, phone number, bank account or vehicle is represented. Geography and statute sections are real only to make the data behave realistically.",
+  "timeline": {
+    "start": "2018-01-01",
+    "end": "2026-06-30"
+  },
+  "counts": {
+    "persons": 1694,
+    "organizations": 108,
+    "locations": 137,
+    "police_stations": 125,
+    "phones": 3336,
+    "devices": 1836,
+    "bank_accounts": 2118,
+    "vehicles": 345,
+    "digital_identities": 667,
+    "cases": 157,
+    "incidents": 2200,
+    "seizures": 951,
+    "person_person": 2958,
+    "person_org": 1067,
+    "person_phone": 3386,
+    "phone_device": 3406,
+    "person_account": 2146,
+    "person_vehicle": 345,
+    "person_location": 6538,
+    "person_incident": 11634,
+    "incident_vehicle": 698,
+    "colocations": 120,
+    "cdr": 200000,
+    "transactions": 60000,
+    "gt_syndicate_membership": 1194,
+    "gt_key_players": 85,
+    "gt_bridges": 22,
+    "gt_duplicates": 194,
+    "gt_anomalies": 374,
+    "gt_latent_links": 212,
+    "fir_narratives.jsonl": 2200,
+    "surveillance_reports.jsonl": 600,
+    "intelligence_notes.jsonl": 420,
+    "ner_annotations": 3220,
+    "graph_nodes": 11931,
+    "graph_edges": 107651
+  },
+  "syndicates": [
+    {
+      "code": "SYN-EXT",
+      "label": "Urban Extortion & Land Syndicate",
+      "members": 92,
+      "hq": "Mumbai",
+      "status": "ACTIVE"
+    },
+    {
+      "code": "SYN-HER",
+      "label": "Golden Crescent Heroin Corridor",
+      "members": 82,
+      "hq": "Tarn Taran",
+      "status": "ACTIVE"
+    },
+    {
+      "code": "SYN-CYB",
+      "label": "Vishing / Digital-Arrest Cyber Fraud Network",
+      "members": 115,
+      "hq": "Patna",
+      "status": "ACTIVE"
+    },
+    {
+      "code": "SYN-HAW",
+      "label": "Hawala & Trade-Based Laundering Ring",
+      "members": 68,
+      "hq": "New Delhi",
+      "status": "DISRUPTED"
+    },
+    {
+      "code": "SYN-MIN",
+      "label": "Illegal Sand & Mineral Mining Mafia",
+      "members": 59,
+      "hq": "Kalaburagi",
+      "status": "ACTIVE"
+    },
+    {
+      "code": "SYN-TRF",
+      "label": "Cross-Border Human Trafficking Network",
+      "members": 55,
+      "hq": "Nadia",
+      "status": "ACTIVE"
+    },
+    {
+      "code": "SYN-ARM",
+      "label": "Illicit Arms Manufacture & Supply Chain",
+      "members": 47,
+      "hq": "Siwan",
+      "status": "DISRUPTED"
+    },
+    {
+      "code": "SYN-VEH",
+      "label": "Inter-State Vehicle Theft & Chop-Shop Ring",
+      "members": 51,
+      "hq": "Gurugram",
+      "status": "ACTIVE"
+    },
+    {
+      "code": "SYN-FIC",
+      "label": "Fake Indian Currency Note Circulation Ring",
+      "members": 41,
+      "hq": "Siwan",
+      "status": "ACTIVE"
+    },
+    {
+      "code": "SYN-GAN",
+      "label": "Eastern Ghats Ganja Supply Corridor",
+      "members": 55,
+      "hq": "Ganjam",
+      "status": "ACTIVE"
+    },
+    {
+      "code": "SYN-PON",
+      "label": "Multi-State Chit Fund / Ponzi Operation",
+      "members": 47,
+      "hq": "Dhubri",
+      "status": "ACTIVE"
+    },
+    {
+      "code": "SYN-BET",
+      "label": "Cricket Betting & Match-Fixing Syndicate",
+      "members": 51,
+      "hq": "New Delhi",
+      "status": "ACTIVE"
+    },
+    {
+      "code": "SYN-KDN",
+      "label": "Kidnapping-for-Ransom Crew",
+      "members": 37,
+      "hq": "Dhanbad",
+      "status": "DISRUPTED"
+    },
+    {
+      "code": "SYN-SHK",
+      "label": "Contract Shooter / Supari Network",
+      "members": 45,
+      "hq": "Meerut",
+      "status": "ACTIVE"
+    },
+    {
+      "code": "SYN-WLD",
+      "label": "Wildlife & Red-Sanders Trafficking Ring",
+      "members": 35,
+      "hq": "Chennai",
+      "status": "ACTIVE"
+    }
+  ],
+  "ner_label_distribution": {
+    "PERSON": 8678,
+    "GPE": 3945,
+    "LOC": 3507,
+    "DATE": 2791,
+    "POLICE_STATION": 2199,
+    "PHONE": 1681,
+    "MONEY": 1587,
+    "ALIAS": 1508,
+    "ORG": 1308,
+    "VEHICLE_REG": 803,
+    "ACCOUNT": 644,
+    "AGENCY": 464,
+    "VEHICLE_MODEL": 434,
+    "CONTRABAND": 414,
+    "QUANTITY": 159
+  }
+}

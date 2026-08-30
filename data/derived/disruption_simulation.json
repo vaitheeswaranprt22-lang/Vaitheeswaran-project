@@ -1,0 +1,67 @@
+[
+ {
+  "budget": 1,
+  "key_player_targeting": {
+   "largest_component": 1363,
+   "largest_component_pct": 99.85,
+   "n_components": 14
+  },
+  "degree_baseline": {
+   "largest_component": 1362,
+   "largest_component_pct": 99.78,
+   "n_components": 15
+  }
+ },
+ {
+  "budget": 5,
+  "key_player_targeting": {
+   "largest_component": 1359,
+   "largest_component_pct": 99.56,
+   "n_components": 14
+  },
+  "degree_baseline": {
+   "largest_component": 1356,
+   "largest_component_pct": 99.34,
+   "n_components": 17
+  }
+ },
+ {
+  "budget": 10,
+  "key_player_targeting": {
+   "largest_component": 1348,
+   "largest_component_pct": 98.75,
+   "n_components": 19
+  },
+  "degree_baseline": {
+   "largest_component": 1348,
+   "largest_component_pct": 98.75,
+   "n_components": 20
+  }
+ },
+ {
+  "budget": 20,
+  "key_player_targeting": {
+   "largest_component": 1333,
+   "largest_component_pct": 97.66,
+   "n_components": 24
+  },
+  "degree_baseline": {
+   "largest_component": 1336,
+   "largest_component_pct": 97.88,
+   "n_components": 22
+  }
+ },
+ {
+  "budget": 40,
+  "key_player_targeting": {
+   "largest_component": 1310,
+   "largest_component_pct": 95.97,
+   "n_components": 27
+  },
+  "degree_baseline": {
+   "largest_component": 1305,
+   "largest_component_pct": 95.6,
+   "n_components": 32
+  }
+ }
+]

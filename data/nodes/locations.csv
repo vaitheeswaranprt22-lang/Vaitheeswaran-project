@@ -1,0 +1,138 @@
+location_id,area,city,state,country,latitude,longitude,place_type,is_border_point,is_hotspot
+LOC000001,Dongri,Mumbai,Maharashtra,India,18.96279,72.8275,Jewellery Shop,0,0
+LOC000002,Dharavi,Mumbai,Maharashtra,India,19.0349,72.84279,Hotel,0,0
+LOC000003,Kurla,Mumbai,Maharashtra,India,19.07353,72.88684,Godown,0,0
+LOC000004,Bhendi Bazaar,Mumbai,Maharashtra,India,18.95981,72.82064,Godown,0,0
+LOC000005,Andheri,Mumbai,Maharashtra,India,19.11407,72.84691,Residence,0,0
+LOC000006,Malad,Mumbai,Maharashtra,India,19.18722,72.85232,Bar,0,0
+LOC000007,Mumbra,Thane,Maharashtra,India,19.18341,73.02479,Residence,0,0
+LOC000008,Vashi,Navi Mumbai,Maharashtra,India,19.08218,72.99119,Bar,0,0
+LOC000009,Yerwada,Pune,Maharashtra,India,18.54781,73.88111,Petrol Pump,0,0
+LOC000010,Kondhwa,Pune,Maharashtra,India,18.45704,73.8876,Farmhouse,0,0
+LOC000011,Kamptee,Nagpur,Maharashtra,India,21.22695,79.19707,Hideout,0,0
+LOC000012,Panchavati,Nashik,Maharashtra,India,20.01459,73.79072,Warehouse,0,0
+LOC000013,Cidco,Aurangabad,Maharashtra,India,19.86758,75.33886,Farmhouse,0,0
+LOC000014,Barshi,Solapur,Maharashtra,India,18.23555,75.69409,Hideout,0,0
+LOC000015,Chandni Chowk,New Delhi,Delhi,India,28.65923,77.23546,Godown,0,1
+LOC000016,Seelampur,New Delhi,Delhi,India,28.67711,77.27533,Warehouse,0,1
+LOC000017,Jamia Nagar,New Delhi,Delhi,India,28.55756,77.28271,Farmhouse,0,1
+LOC000018,Karol Bagh,New Delhi,Delhi,India,28.64425,77.18711,Jewellery Shop,0,1
+LOC000019,Najafgarh,New Delhi,Delhi,India,28.61304,77.01367,Godown,0,1
+LOC000020,Nangloi,New Delhi,Delhi,India,28.68418,77.06042,Cyber Cafe,0,1
+LOC000021,Sangam Vihar,New Delhi,Delhi,India,28.48827,77.23159,Cyber Cafe,0,1
+LOC000022,Paharganj,New Delhi,Delhi,India,28.64769,77.22086,Hideout,0,1
+LOC000023,Aminabad,Lucknow,Uttar Pradesh,India,26.84458,80.91064,Petrol Pump,0,0
+LOC000024,Chakeri,Kanpur,Uttar Pradesh,India,26.41802,80.40132,Petrol Pump,0,0
+LOC000025,Lisari Gate,Meerut,Uttar Pradesh,India,28.97425,77.70598,Gym,0,0
+LOC000026,Loni,Ghaziabad,Uttar Pradesh,India,28.74286,77.27579,Jewellery Shop,0,0
+LOC000027,Sector 63,Noida,Uttar Pradesh,India,28.63194,77.37857,Warehouse,0,0
+LOC000028,Chetganj,Varanasi,Uttar Pradesh,India,25.31724,82.98995,Dhaba,0,0
+LOC000029,Rajghat,Gorakhpur,Uttar Pradesh,India,26.76019,83.36182,Hideout,0,0
+LOC000030,Dhoomanganj,Prayagraj,Uttar Pradesh,India,25.43722,81.80306,Transit Point,0,0
+LOC000031,Kutba,Muzaffarnagar,Uttar Pradesh,India,29.47784,77.70244,Godown,0,0
+LOC000032,Baradari,Bareilly,Uttar Pradesh,India,28.3677,79.43192,Gym,0,0
+LOC000033,Sarai Mir,Azamgarh,Uttar Pradesh,India,26.01058,82.80942,Residence,0,0
+LOC000034,Line Bazaar,Jaunpur,Uttar Pradesh,India,25.75361,82.67229,Jewellery Shop,0,0
+LOC000035,Kadamkuan,Patna,Bihar,India,25.62537,85.1468,Scrap Yard,0,1
+LOC000036,Kasim Bazaar,Munger,Bihar,India,25.3687,86.46907,Jewellery Shop,0,0
+LOC000037,Mithanpura,Muzaffarpur,Bihar,India,26.12944,85.39524,Hotel,0,1
+LOC000038,Chandauti,Gaya,Bihar,India,24.78741,84.99597,Border Crossing,0,0
+LOC000039,Mahadeva,Siwan,Bihar,India,26.21306,84.36525,Residence,0,0
+LOC000040,Barauni,Begusarai,Bihar,India,25.42198,86.12977,Hotel,0,1
+LOC000041,Khajanchi Hat,Purnia,Bihar,India,25.78858,87.47757,Scrap Yard,0,0
+LOC000042,Karmatanr,Jamtara,Jharkhand,India,23.95479,86.79482,Godown,0,0
+LOC000043,Sarwan,Deoghar,Jharkhand,India,24.47171,86.69972,Godown,0,1
+LOC000044,Jharia,Dhanbad,Jharkhand,India,23.74956,86.41065,Dhaba,0,0
+LOC000045,Hatia,Ranchi,Jharkhand,India,23.30257,85.31951,Transit Point,0,0
+LOC000046,Bengabad,Giridih,Jharkhand,India,24.1853,86.30745,Bar,0,0
+LOC000047,Metiabruz,Kolkata,West Bengal,India,22.53329,88.31358,Border Crossing,0,1
+LOC000048,Rajabazar,Kolkata,West Bengal,India,22.57998,88.37543,Farmhouse,0,1
+LOC000049,Kaliachak,Malda,West Bengal,India,24.97035,88.00242,Cyber Cafe,1,1
+LOC000050,Jalangi,Murshidabad,West Bengal,India,24.11042,88.40108,Cyber Cafe,1,1
+LOC000051,Bongaon,North 24 Parganas,West Bengal,India,23.07416,88.81118,Godown,0,0
+LOC000052,Matigara,Siliguri,West Bengal,India,26.72719,88.37142,Cyber Cafe,1,1
+LOC000053,Karimpur,Nadia,West Bengal,India,23.96971,88.62078,Marriage Hall,1,0
+LOC000054,Ajnala,Amritsar,Punjab,India,31.83946,74.75814,Hotel,1,0
+LOC000055,Khalra,Tarn Taran,Punjab,India,31.44862,74.56847,Gym,0,0
+LOC000056,Jamalpur,Ludhiana,Punjab,India,30.91108,75.85307,Hotel,1,0
+LOC000057,Mamdot,Ferozepur,Punjab,India,30.92456,74.61601,Hotel,1,0
+LOC000058,Nakodar,Jalandhar,Punjab,India,31.1138,75.47897,Bar,1,0
+LOC000059,Rampura Phul,Bathinda,Punjab,India,30.26925,75.24749,Godown,0,1
+LOC000060,Punhana,Nuh,Haryana,India,27.86723,77.21101,Hideout,0,0
+LOC000061,Sohna,Gurugram,Haryana,India,28.25004,77.06581,Residence,0,0
+LOC000062,Gohana,Sonipat,Haryana,India,29.14638,76.70853,Cyber Cafe,0,0
+LOC000063,Barwala,Hisar,Haryana,India,29.36333,75.90971,Border Crossing,0,0
+LOC000064,Ballabgarh,Faridabad,Haryana,India,28.34729,77.32805,Transit Point,0,0
+LOC000065,Osian,Jodhpur,Rajasthan,India,26.71758,72.91971,Jewellery Shop,0,0
+LOC000066,Nokha,Bikaner,Rajasthan,India,27.56853,73.4757,Scrap Yard,0,0
+LOC000067,Chomu,Jaipur,Rajasthan,India,27.16846,75.72915,Marriage Hall,0,1
+LOC000068,Kaman,Bharatpur,Rajasthan,India,27.6531,77.26593,Hideout,0,1
+LOC000069,Ramgarh,Alwar,Rajasthan,India,27.52158,76.62084,Petrol Pump,0,1
+LOC000070,Chohtan,Barmer,Rajasthan,India,25.48114,71.04168,Transit Point,0,0
+LOC000071,Juhapura,Ahmedabad,Gujarat,India,22.99114,72.53016,Transit Point,0,0
+LOC000072,Varachha,Surat,Gujarat,India,21.19637,72.86136,Cyber Cafe,0,0
+LOC000073,Mundra,Kutch,Gujarat,India,22.83708,69.72983,Cyber Cafe,0,0
+LOC000074,Kutiyana,Porbandar,Gujarat,India,21.62158,69.97079,Godown,0,0
+LOC000075,Gondal,Rajkot,Gujarat,India,21.95838,70.80167,Petrol Pump,0,0
+LOC000076,Karelibaug,Vadodara,Gujarat,India,22.32869,73.19409,Petrol Pump,0,0
+LOC000077,Bairagarh,Bhopal,Madhya Pradesh,India,23.27477,77.32792,Scrap Yard,0,0
+LOC000078,Rau,Indore,Madhya Pradesh,India,22.64914,75.80858,Godown,0,0
+LOC000079,Sanawad,Khargone,Madhya Pradesh,India,22.17019,75.90242,Hotel,0,0
+LOC000080,Morar,Gwalior,Madhya Pradesh,India,26.22147,78.20426,Jewellery Shop,0,0
+LOC000081,Mehgaon,Bhind,Madhya Pradesh,India,26.49265,78.62698,Godown,0,0
+LOC000082,Gorakhpur,Jabalpur,Madhya Pradesh,India,23.16759,79.94739,Transit Point,0,0
+LOC000083,Charminar,Hyderabad,Telangana,India,17.35976,78.47486,Scrap Yard,0,0
+LOC000084,Kukatpally,Hyderabad,Telangana,India,17.48623,78.40974,Residence,0,0
+LOC000085,Chandrayangutta,Hyderabad,Telangana,India,17.33336,78.49109,Hotel,0,0
+LOC000086,Hanamkonda,Warangal,Telangana,India,18.00878,79.55269,Hotel,0,0
+LOC000087,Bodhan,Nizamabad,Telangana,India,18.66779,77.89485,Dhaba,0,0
+LOC000088,Gajuwaka,Visakhapatnam,Andhra Pradesh,India,17.67545,83.2021,Petrol Pump,0,0
+LOC000089,Gunadala,Vijayawada,Andhra Pradesh,India,16.51407,80.65268,Jewellery Shop,0,0
+LOC000090,Mangalagiri,Guntur,Andhra Pradesh,India,16.43011,80.55502,Hideout,0,0
+LOC000091,Nandyal,Kurnool,Andhra Pradesh,India,15.47185,78.47847,Jewellery Shop,0,0
+LOC000092,Chintapalli,Alluri Sitharama Raju,Andhra Pradesh,India,17.86088,82.34667,Dhaba,0,0
+LOC000093,Vyasarpadi,Chennai,Tamil Nadu,India,13.12274,80.24524,Gym,0,0
+LOC000094,Kodungaiyur,Chennai,Tamil Nadu,India,13.13103,80.23855,Residence,0,0
+LOC000095,Melur,Madurai,Tamil Nadu,India,10.02224,78.3489,Dhaba,0,0
+LOC000096,Ukkadam,Coimbatore,Tamil Nadu,India,10.99091,76.96669,Dhaba,0,0
+LOC000097,Palayamkottai,Tirunelveli,Tamil Nadu,India,8.7186,77.73084,Farmhouse,0,0
+LOC000098,Srirangam,Trichy,Tamil Nadu,India,10.86798,78.69592,Hideout,0,0
+LOC000099,KG Halli,Bengaluru,Karnataka,India,13.00798,77.6042,Cyber Cafe,0,1
+LOC000100,Yeshwanthpur,Bengaluru,Karnataka,India,13.02634,77.54707,Bar,0,1
+LOC000101,Ullal,Mangaluru,Karnataka,India,12.80948,74.86499,Cyber Cafe,0,1
+LOC000102,Afzalpur,Kalaburagi,Karnataka,India,17.20729,76.36952,Transit Point,0,1
+LOC000103,Sandur,Ballari,Karnataka,India,15.10763,76.5405,Petrol Pump,0,1
+LOC000104,Mattancherry,Kochi,Kerala,India,9.96365,76.25723,Cyber Cafe,0,0
+LOC000105,Tirur,Malappuram,Kerala,India,10.91534,75.92575,Hotel,0,0
+LOC000106,Nadakkavu,Kozhikode,Kerala,India,11.26765,75.77077,Marriage Hall,0,0
+LOC000107,Chavakkad,Thrissur,Kerala,India,10.58445,76.01633,Gym,0,0
+LOC000108,Thalassery,Kannur,Kerala,India,11.74699,75.49641,Cyber Cafe,0,0
+LOC000109,Nayapalli,Bhubaneswar,Odisha,India,20.28446,85.8132,Warehouse,0,0
+LOC000110,Jagatpur,Cuttack,Odisha,India,20.51657,85.86729,Jewellery Shop,0,0
+LOC000111,Chitrakonda,Malkangiri,Odisha,India,18.09702,82.10019,Petrol Pump,0,0
+LOC000112,Berhampur,Ganjam,Odisha,India,19.31878,84.78231,Jewellery Shop,0,0
+LOC000113,Paltan Bazaar,Guwahati,Assam,India,26.17357,91.75925,Jewellery Shop,1,1
+LOC000114,Golakganj,Dhubri,Assam,India,26.02193,89.81691,Petrol Pump,0,1
+LOC000115,Sutarkandi,Karimganj,Assam,India,24.87968,92.34231,Border Crossing,1,1
+LOC000116,Moreh,Imphal,Manipur,India,24.25418,94.30003,Border Crossing,0,0
+LOC000117,Tuibong,Churachandpur,Manipur,India,24.3214,93.68328,Petrol Pump,0,0
+LOC000118,Anjuna,North Goa,Goa,India,15.57327,73.73249,Scrap Yard,0,0
+LOC000119,Vasco,South Goa,Goa,India,15.40014,73.81334,Petrol Pump,0,0
+LOC000120,Maisuma,Srinagar,Jammu and Kashmir,India,34.06805,74.79591,Dhaba,1,1
+LOC000121,Uri,Baramulla,Jammu and Kashmir,India,34.0833,74.04758,Transit Point,0,1
+LOC000122,Birgaon,Raipur,Chhattisgarh,India,21.27602,81.63096,Residence,0,0
+LOC000123,Bhairamgarh,Bijapur,Chhattisgarh,India,18.79608,80.7942,Petrol Pump,0,0
+LOC000124,Clement Town,Dehradun,Uttarakhand,India,30.2693,77.99884,Border Crossing,0,0
+LOC000125,Jwalapur,Haridwar,Uttarakhand,India,29.92022,78.12587,Transit Point,0,0
+LOC000126,Dubai Hub,Dubai,-,UAE,25.2048,55.2708,Transit Point,1,1
+LOC000127,Sharjah Hub,Sharjah,-,UAE,25.3463,55.4209,Transit Point,1,1
+LOC000128,Kathmandu Hub,Kathmandu,-,Nepal,27.7172,85.324,Transit Point,1,1
+LOC000129,Birgunj Hub,Birgunj,-,Nepal,27.01,84.88,Transit Point,1,1
+LOC000130,Dhaka Hub,Dhaka,-,Bangladesh,23.8103,90.4125,Transit Point,1,1
+LOC000131,Benapole Hub,Benapole,-,Bangladesh,23.04,88.92,Transit Point,1,1
+LOC000132,Karachi Hub,Karachi,-,Pakistan,24.8607,67.0011,Transit Point,1,1
+LOC000133,Tamu Hub,Tamu,-,Myanmar,24.21,94.3,Transit Point,1,1
+LOC000134,Bangkok Hub,Bangkok,-,Thailand,13.7563,100.5018,Transit Point,1,1
+LOC000135,Kuala Lumpur Hub,Kuala Lumpur,-,Malaysia,3.139,101.6869,Transit Point,1,1
+LOC000136,Colombo Hub,Colombo,-,Sri Lanka,6.9271,79.8612,Transit Point,1,1
+LOC000137,Kandahar Hub,Kandahar,-,Afghanistan,31.61,65.71,Transit Point,1,1

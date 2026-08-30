@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Criminal Network Analysis Console</title>
+<style>
+  :root{
+    --bg:#0d1117; --bg2:#111826; --panel:#151d2b; --panel2:#1b2536;
+    --line:#243044; --line2:#2f3d55;
+    --tx:#dce3ee; --tx2:#8d9bb0; --tx3:#5f6d82;
+    --ac:#4da3ff; --ac2:#1f6feb;
+    --hi:#f0883e; --dg:#f85149; --ok:#3fb950; --wr:#d29922; --pu:#a371f7;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--tx);font:13px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;height:100vh;overflow:hidden}
+  #app{display:grid;grid-template-columns:212px 1fr 340px;grid-template-rows:52px 1fr;height:100vh}
+
+  header{grid-column:1/-1;display:flex;align-items:center;gap:16px;padding:0 16px;background:var(--bg2);border-bottom:1px solid var(--line)}
+  .logo{font-weight:650;letter-spacing:.2px;display:flex;align-items:center;gap:8px;white-space:nowrap}
+  .logo b{color:var(--ac)}
+  .badge{font-size:10px;padding:2px 7px;border-radius:10px;background:rgba(210,153,34,.14);color:var(--wr);border:1px solid rgba(210,153,34,.3);font-weight:600;letter-spacing:.4px}
+  .searchwrap{flex:1;max-width:520px;position:relative}
+  #search{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--tx);padding:7px 11px;border-radius:6px;font-size:13px;outline:none}
+  #search:focus{border-color:var(--ac)}
+  #results{position:absolute;top:38px;left:0;right:0;background:var(--panel2);border:1px solid var(--line2);border-radius:8px;max-height:400px;overflow:auto;z-index:50;display:none;box-shadow:0 12px 32px rgba(0,0,0,.6)}
+  .res{padding:8px 11px;border-bottom:1px solid var(--line);cursor:pointer}
+  .res:hover{background:var(--ac2)}
+  .res b{font-weight:600}
+  .res .t{font-size:10px;color:var(--tx3);text-transform:uppercase;letter-spacing:.5px}
+  .hstats{display:flex;gap:14px;margin-left:auto;font-size:11px;color:var(--tx2);white-space:nowrap}
+  .hstats b{color:var(--tx);font-family:var(--mono)}
+
+  nav{background:var(--bg2);border-right:1px solid var(--line);padding:10px 0;overflow-y:auto}
+  .nav{padding:9px 16px;cursor:pointer;color:var(--tx2);border-left:2px solid transparent;display:flex;justify-content:space-between;align-items:center;gap:6px}
+  .nav:hover{background:var(--panel);color:var(--tx)}
+  .nav.on{background:var(--panel);color:var(--ac);border-left-color:var(--ac);font-weight:600}
+  .nav .n{font-family:var(--mono);font-size:10px;color:var(--tx3);background:var(--panel2);padding:1px 6px;border-radius:8px}
+  .navsec{padding:12px 16px 5px;font-size:10px;text-transform:uppercase;letter-spacing:.7px;color:var(--tx3);font-weight:600}
+
+  main{overflow:hidden;position:relative;background:var(--bg)}
+  #cvwrap{position:absolute;inset:0}
+  canvas{display:block;cursor:grab}
+  canvas.drag{cursor:grabbing}
+  .ctrls{position:absolute;top:12px;left:12px;display:flex;gap:6px;flex-wrap:wrap;z-index:10;align-items:center}
+  .btn{background:var(--panel);border:1px solid var(--line2);color:var(--tx2);padding:5px 10px;border-radius:5px;cursor:pointer;font-size:11px}
+  .btn:hover{background:var(--panel2);color:var(--tx)}
+  .btn.on{background:var(--ac2);color:#fff;border-color:var(--ac)}
+  select,input[type=number]{background:var(--panel);border:1px solid var(--line2);color:var(--tx);padding:5px 8px;border-radius:5px;font-size:11px;outline:none}
+  .legend{position:absolute;bottom:12px;left:12px;background:rgba(21,29,43,.94);border:1px solid var(--line);border-radius:7px;padding:9px 11px;font-size:11px;z-index:10}
+  .lg{display:flex;align-items:center;gap:7px;margin:3px 0;color:var(--tx2)}
+  .dot{width:9px;height:9px;border-radius:50%}
+  .hint{position:absolute;bottom:12px;right:12px;font-size:11px;color:var(--tx3);background:rgba(21,29,43,.9);padding:5px 9px;border-radius:5px;z-index:10}
+
+  .view{position:absolute;inset:0;overflow:auto;padding:16px 18px;display:none}
+  .view.on{display:block}
+  h2{font-size:15px;margin-bottom:3px;font-weight:620}
+  .sub{color:var(--tx2);font-size:12px;margin-bottom:14px;max-width:900px}
+  table{width:100%;border-collapse:collapse;font-size:12px}
+  th{text-align:left;padding:7px 9px;color:var(--tx3);font-size:10px;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--line2);position:sticky;top:0;background:var(--bg);font-weight:600}
+  td{padding:7px 9px;border-bottom:1px solid var(--line)}
+  tr.clk{cursor:pointer}
+  tr.clk:hover td{background:var(--panel)}
+  .mono{font-family:var(--mono);font-size:11px}
+  .pill{display:inline-block;padding:1px 7px;border-radius:9px;font-size:10px;font-weight:600;letter-spacing:.2px}
+  .p-hi{background:rgba(248,81,73,.16);color:var(--dg)}
+  .p-md{background:rgba(210,153,34,.16);color:var(--wr)}
+  .p-lo{background:rgba(63,185,80,.14);color:var(--ok)}
+  .p-nu{background:rgba(141,155,176,.14);color:var(--tx2)}
+  .p-ac{background:rgba(77,163,255,.14);color:var(--ac)}
+  .p-pu{background:rgba(163,113,247,.16);color:var(--pu)}
+  .bar{height:4px;background:var(--panel2);border-radius:2px;overflow:hidden;min-width:52px}
+  .bar i{display:block;height:100%;background:var(--ac)}
+
+  aside{background:var(--bg2);border-left:1px solid var(--line);overflow-y:auto;padding:14px}
+  .ph{color:var(--tx3);text-align:center;padding:44px 18px;font-size:12px}
+  .dh{font-size:15px;font-weight:640;margin-bottom:2px}
+  .da{color:var(--hi);font-size:12px;margin-bottom:10px;font-style:italic}
+  .sec{margin:14px 0 6px;font-size:10px;text-transform:uppercase;letter-spacing:.6px;color:var(--tx3);font-weight:600;border-bottom:1px solid var(--line);padding-bottom:4px}
+  .kv{display:grid;grid-template-columns:88px 1fr;gap:4px 10px;font-size:12px;margin-bottom:3px}
+  .kv span:first-child{color:var(--tx3)}
+  .item{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:8px 10px;margin-bottom:6px;font-size:12px;cursor:pointer}
+  .item:hover{border-color:var(--ac)}
+  .item .m{color:var(--tx2);font-size:11px;margin-top:2px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin-bottom:10px}
+  .card h4{font-size:13px;margin-bottom:6px;font-weight:620}
+  .ev{font-family:var(--mono);font-size:10.5px;color:var(--tx2);background:var(--bg);padding:7px 9px;border-radius:5px;margin-top:7px;white-space:pre-wrap;word-break:break-word;border:1px solid var(--line);max-height:150px;overflow:auto}
+  .acts{display:flex;gap:6px;margin-top:9px}
+  .act{padding:4px 11px;border-radius:5px;font-size:11px;cursor:pointer;border:1px solid;font-weight:600}
+  .a-ok{background:rgba(63,185,80,.12);color:var(--ok);border-color:rgba(63,185,80,.4)}
+  .a-no{background:rgba(248,81,73,.12);color:var(--dg);border-color:rgba(248,81,73,.4)}
+  .a-df{background:var(--panel2);color:var(--tx2);border-color:var(--line2)}
+  .act:hover{filter:brightness(1.35)}
+  .warn{background:rgba(210,153,34,.09);border:1px solid rgba(210,153,34,.3);border-radius:7px;padding:9px 12px;font-size:11.5px;color:var(--wr);margin-bottom:14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+  .metric{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:11px 13px}
+  .metric .v{font-size:21px;font-weight:640;font-family:var(--mono)}
+  .metric .l{font-size:10.5px;color:var(--tx3);text-transform:uppercase;letter-spacing:.5px;margin-top:1px}
+  .metric .d{font-size:11px;color:var(--tx2);margin-top:5px}
+  .flex{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+  .path{background:var(--panel);border-left:3px solid var(--ac);padding:10px 12px;border-radius:0 6px 6px 0;margin-bottom:8px;font-size:12px}
+  .hop{color:var(--tx2);margin-top:5px;line-height:1.7}
+  .hop b{color:var(--ac);font-weight:600}
+  ::-webkit-scrollbar{width:9px;height:9px}
+  ::-webkit-scrollbar-track{background:var(--bg)}
+  ::-webkit-scrollbar-thumb{background:var(--line2);border-radius:5px}
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="logo"><b>◈ SICND</b> Network Analysis Console <span class="badge">SYNTHETIC DATA</span></div>
+    <div class="searchwrap">
+      <input id="search" placeholder="Search person, phone, account, vehicle, organisation…" autocomplete="off">
+      <div id="results"></div>
+    </div>
+    <div class="hstats" id="hstats"></div>
+  </header>
+
+  <nav id="nav"></nav>
+
+  <main>
+    <div id="v-network" class="view on" style="padding:0">
+      <div id="cvwrap"><canvas id="cv"></canvas></div>
+      <div class="ctrls">
+        <button class="btn" onclick="loadOverview()">Overview</button>
+        <select id="corr" onchange="loadOverview()">
+          <option value="1">All links</option>
+          <option value="2" selected>≥2 sources</option>
+          <option value="3">≥3 sources</option>
+        </select>
+        <select id="synf" onchange="loadOverview()"><option value="">All syndicates</option></select>
+        <button class="btn" id="lblBtn" onclick="toggleLabels()">Labels</button>
+        <button class="btn" onclick="fit()">Fit</button>
+      </div>
+      <div class="legend" id="legend"></div>
+      <div class="hint">drag to pan · scroll to zoom · click a node to expand</div>
+    </div>
+
+    <div id="v-key" class="view"></div>
+    <div id="v-anom" class="view"></div>
+    <div id="v-links" class="view"></div>
+    <div id="v-res" class="view"></div>
+    <div id="v-comm" class="view"></div>
+    <div id="v-path" class="view"></div>
+    <div id="v-score" class="view"></div>
+    <div id="v-audit" class="view"></div>
+  </main>
+
+  <aside id="detail"><div class="ph">Select a node or a row to see its full record.</div></aside>
+</div>
+
+<script>
+const $=s=>document.querySelector(s), api=async u=>(await fetch(u)).json();
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const NF=n=>(n==null?'—':Number(n).toLocaleString('en-IN'));
+const inr=n=>'₹'+Number(n||0).toLocaleString('en-IN');
+
+const NAVS=[
+ {s:'Investigate'},
+ {id:'network',t:'Relationship Map'},
+ {id:'path',t:'Connection Finder'},
+ {s:'Intelligence'},
+ {id:'key',t:'Key Players'},
+ {id:'comm',t:'Networks / Groups'},
+ {id:'anom',t:'Suspicious Patterns',k:'anomalies'},
+ {id:'links',t:'Hidden Links',k:'hidden_links'},
+ {s:'Verification'},
+ {id:'res',t:'Identity Review',k:'resolution_proposals'},
+ {id:'audit',t:'Decision Log'},
+ {s:'System'},
+ {id:'score',t:'Accuracy Scorecard'}
+];
+let SUM={}, CUR='network';
+
+/* ─────────── layout / graph state ─────────── */
+const cv=$('#cv'), ctx=cv.getContext('2d');
+let NODES=[],EDGES=[],T={x:0,y:0,k:1},showLabels=true,sel=null,hover=null,anim=0;
+const PAL=['#4da3ff','#f0883e','#3fb950','#a371f7','#f85149','#d29922','#2dd4bf','#ec4899','#8b949e','#60a5fa','#fb923c','#34d399','#c084fc','#f87171','#facc15'];
+const colorOf=n=>n.community>=0?PAL[n.community%PAL.length]:'#5f6d82';
+const radOf=n=>3+Math.sqrt(n.influence||0)*6;   // 3..9 world px, keeps discs
+                                               // smaller than the FR spacing
+
+function resize(){const w=$('#cvwrap');cv.width=w.clientWidth*devicePixelRatio;cv.height=w.clientHeight*devicePixelRatio;cv.style.width=w.clientWidth+'px';cv.style.height=w.clientHeight+'px';ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);draw();}
+addEventListener('resize',()=>{resize();if(PENDING)_setGraph(PENDING.d,PENDING.focus);});
+new ResizeObserver(()=>{const w=document.querySelector('#cvwrap');
+  if(w.clientWidth>60&&LAY.k<20&&PENDING){_setGraph(PENDING.d,PENDING.focus);}
+  else resize();}).observe(document.querySelector('#cvwrap'));
+
+/* Fruchterman-Reingold with temperature cooling.
+   The ad-hoc spring model this replaced collapsed every layout into a hairball:
+   with a fixed step size and strong centre gravity, dense cores contract faster
+   than repulsion can separate them. FR sets the ideal separation k from the
+   available area and cools the maximum displacement each pass, so the graph
+   expands first and only then settles. */
+let LAY={k:60,temp:0,iter:0,maxIter:300};
+/* The CSS grid has not necessarily sized <main> by the time the first data
+   arrives. Reading clientWidth then yields 0, which silently poisons both the
+   layout constant and the zoom transform (k=0 renders an empty canvas). Wait
+   for a real box before doing any geometry. */
+function whenSized(cb,tries=60){
+  const w=document.querySelector('#cvwrap');
+  if(w.clientWidth>60&&w.clientHeight>60)return cb();
+  if(tries<=0)return cb();
+  requestAnimationFrame(()=>whenSized(cb,tries-1));
+}
+
+let PENDING=null;
+function setGraph(d,focus){PENDING={d,focus};whenSized(()=>_setGraph(d,focus));}
+function _setGraph(d,focus){
+  resize();                    // the canvas must be laid out BEFORE k is derived
+  const prev={};NODES.forEach(n=>prev[n.id]={x:n.x,y:n.y});
+  const W=cv.clientWidth||900,H=cv.clientHeight||600;
+  NODES=d.nodes.map(n=>{const p=prev[n.id];
+    return{...n,x:p?p.x:Math.random()*W,y:p?p.y:Math.random()*H,dx:0,dy:0};});
+  const idx={};NODES.forEach(n=>idx[n.id]=n);
+  EDGES=d.edges.filter(e=>idx[e.source]&&idx[e.target]).map(e=>({...e,s:idx[e.source],t:idx[e.target]}));
+  if(focus){const f=idx[focus];if(f){f.x=W/2;f.y=H/2;}}
+  layout(W,H);
+  fit();
+}
+
+/* Laid out synchronously rather than one iteration per animation frame.
+   Frame-driven layout looked smoother but was not reliable: a throttled or
+   background tab advanced ~2 iterations a second, so the graph never settled
+   and the auto-fit never fired. A few hundred milliseconds of blocking work
+   that always finishes beats an animation that sometimes never does. */
+function layout(W,H){
+  const n=NODES.length;if(!n)return;
+  const k=LAY.k=1.55*Math.sqrt((W*H)/n);
+  const cut=6*k, cut2=cut*cut;      // beyond this, k^2/d is negligible
+  let temp=W/4;
+  const iters=n>300?130:n>150?190:260;
+  for(let it=0;it<iters;it++){
+    for(const a of NODES){a.dx=0;a.dy=0;}
+    for(let i=0;i<n;i++){const a=NODES[i];
+      for(let j=i+1;j<n;j++){const b=NODES[j];
+        let dx=a.x-b.x,dy=a.y-b.y,d2=dx*dx+dy*dy;
+        if(d2>cut2)continue;
+        let d=Math.sqrt(d2);
+        if(d<0.01){dx=Math.random()-.5;dy=Math.random()-.5;d=0.01;}
+        const f=(k*k)/d,ux=dx/d*f,uy=dy/d*f;
+        a.dx+=ux;a.dy+=uy;b.dx-=ux;b.dy-=uy;}}
+    for(const e of EDGES){
+      let dx=e.s.x-e.t.x,dy=e.s.y-e.t.y,d=Math.hypot(dx,dy)||0.01;
+      // corroborated links pull harder: agreement should read as proximity
+      const w=0.55+0.75*(e.corroboration>=3?1:e.corroboration===2?0.55:0.15);
+      const f=(d*d)/k*w,ux=dx/d*f,uy=dy/d*f;
+      e.s.dx-=ux;e.s.dy-=uy;e.t.dx+=ux;e.t.dy+=uy;}
+    for(const a of NODES){
+      a.dx+=(W/2-a.x)*0.012;a.dy+=(H/2-a.y)*0.012;
+      const d=Math.hypot(a.dx,a.dy)||1,lim=Math.min(d,temp);
+      a.x+=a.dx/d*lim;a.y+=a.dy/d*lim;}
+    temp*=0.955;
+  }
+  anim=0;
+}
+function tick(){draw();}
+
+function draw(){
+  ctx.save();ctx.clearRect(0,0,cv.width,cv.height);
+  ctx.translate(T.x,T.y);ctx.scale(T.k,T.k);
+  for(const e of EDGES){
+    const c=e.corroboration||1;
+    ctx.strokeStyle=c>=3?'rgba(240,136,62,.5)':c===2?'rgba(77,163,255,.3)':'rgba(120,135,160,.17)';
+    ctx.lineWidth=(c>=3?1.5:c===2?1.05:.7)/Math.max(T.k,.6);
+    ctx.beginPath();ctx.moveTo(e.s.x,e.s.y);ctx.lineTo(e.t.x,e.t.y);ctx.stroke();
+  }
+  for(const n of NODES){
+    const r=radOf(n),isSel=sel&&n.id===sel,isHov=hover&&n.id===hover.id;
+    if(n.is_focus||isSel){ctx.beginPath();ctx.arc(n.x,n.y,r+7,0,7);ctx.fillStyle='rgba(77,163,255,.22)';ctx.fill();}
+    ctx.beginPath();ctx.arc(n.x,n.y,r,0,7);
+    ctx.fillStyle=colorOf(n);ctx.fill();
+    ctx.lineWidth=((isSel||isHov)?2.2:1)/Math.max(T.k,.7);
+    ctx.strokeStyle=(isSel||isHov)?'#fff':'rgba(13,17,23,.85)';ctx.stroke();
+    if(n.risk>=75){ctx.beginPath();ctx.arc(n.x,n.y,r+2.5,0,7);
+      ctx.strokeStyle='rgba(248,81,73,.8)';ctx.lineWidth=1.2/Math.max(T.k,.7);ctx.stroke();}
+    if((showLabels&&T.k>0.5&&r>4.4)||isSel||isHov){
+      ctx.font=`${isSel?'600 ':''}${11/Math.max(T.k,.75)}px system-ui`;
+      ctx.fillStyle=(isSel||isHov)?'#fff':'rgba(220,227,238,.7)';ctx.textAlign='center';
+      ctx.fillText(n.label,n.x,n.y-r-4/Math.max(T.k,.75));
+    }
+  }
+  ctx.restore();
+}
+
+/* interaction */
+let drag=null,down=null;
+const toWorld=(mx,my)=>({x:(mx-T.x)/T.k,y:(my-T.y)/T.k});
+function at(mx,my){const p=toWorld(mx,my);let best=null,bd=1e9;
+  for(const n of NODES){const d=Math.hypot(n.x-p.x,n.y-p.y);if(d<Math.max(radOf(n)+5,11)&&d<bd){bd=d;best=n;}}return best;}
+cv.addEventListener('mousedown',e=>{const n=at(e.offsetX,e.offsetY);
+  if(n){drag={n,ox:e.offsetX,oy:e.offsetY,moved:false};}else{down={x:e.offsetX-T.x,y:e.offsetY-T.y};cv.classList.add('drag');}});
+cv.addEventListener('mousemove',e=>{
+  if(drag){const p=toWorld(e.offsetX,e.offsetY);drag.n.x=p.x;drag.n.y=p.y;drag.n.dx=drag.n.dy=0;
+    if(Math.abs(e.offsetX-drag.ox)>3||Math.abs(e.offsetY-drag.oy)>3)drag.moved=true;draw();return;}
+  if(down){T.x=e.offsetX-down.x;T.y=e.offsetY-down.y;draw();return;}
+  const n=at(e.offsetX,e.offsetY);
+  if((n&&n.id)!==(hover&&hover.id)){hover=n;cv.style.cursor=n?'pointer':'grab';draw();}});
+addEventListener('mouseup',e=>{
+  if(drag&&!drag.moved){selectNode(drag.n.id);}
+  drag=null;down=null;cv.classList.remove('drag');});
+cv.addEventListener('wheel',e=>{e.preventDefault();
+  const f=e.deltaY<0?1.13:1/1.13,mx=e.offsetX,my=e.offsetY;
+  T.x=mx-(mx-T.x)*f;T.y=my-(my-T.y)*f;T.k*=f;draw();},{passive:false});
+function fit(){if(!NODES.length)return;
+  if(cv.clientWidth<60||cv.clientHeight<60)return;
+  const xs=NODES.map(n=>n.x),ys=NODES.map(n=>n.y);
+  const x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys);
+  const W=cv.clientWidth,H=cv.clientHeight;
+  const pad=90;
+  T.k=Math.min(W/(x1-x0+pad),H/(y1-y0+pad),1.3);
+  T.x=W/2-(x0+x1)/2*T.k;T.y=H/2-(y0+y1)/2*T.k;draw();}
+function toggleLabels(){showLabels=!showLabels;$('#lblBtn').classList.toggle('on',showLabels);draw();}
+
+/* ─────────── data loading ─────────── */
+async function loadOverview(){
+  const c=$('#corr').value,s=$('#synf').value;
+  const d=await api(`/api/graph?min_corroboration=${c}&syndicate=${encodeURIComponent(s)}&limit=260`);
+  setGraph(d);
+  legend(d);
+}
+function legend(d){
+  const cs={};d.nodes.forEach(n=>{if(n.community>=0)cs[n.community]=(cs[n.community]||0)+1;});
+  const top=Object.entries(cs).sort((a,b)=>b[1]-a[1]).slice(0,7);
+  $('#legend').innerHTML=`<div style="font-weight:600;margin-bottom:5px">${d.nodes.length} nodes · ${d.edges.length} links</div>`+
+    top.map(([c,n])=>`<div class="lg"><span class="dot" style="background:${PAL[c%PAL.length]}"></span>Group ${c} <span style="color:var(--tx3)">(${n})</span></div>`).join('')+
+    `<div class="lg" style="margin-top:6px;border-top:1px solid var(--line);padding-top:5px"><span style="width:16px;height:2px;background:#f0883e;display:inline-block"></span>3+ sources agree</div>`+
+    `<div class="lg"><span class="dot" style="border:1.5px solid #f85149;background:none"></span>risk ≥ 75</div>`;
+}
+
+async function selectNode(id){
+  sel=id;draw();
+  const d=await api('/api/person/'+id);
+  if(d.detail){$('#detail').innerHTML='<div class="ph">No person record for this node.</div>';return;}
+  renderDetail(d);
+  const e=await api(`/api/ego/${id}?depth=1&limit=90`);
+  if(CUR==='network'){setGraph(e,id);legend(e);}
+}
+
+function renderDetail(d){
+  const p=d.profile,a=d.analytics||{};
+  const rel=d.relationships.slice(0,14).map(r=>
+    `<div class="item" onclick="selectNode('${r.person_id}')"><b>${esc(r.name)}</b>
+     ${r.verified?'<span class="pill p-lo">verified</span>':'<span class="pill p-nu">unverified</span>'}
+     <div class="m">${esc(r.relation.replace(/_/g,' ').toLowerCase())} · ${r.direction} · ${esc(r.source)}</div></div>`).join('')||'<div class="m">None recorded.</div>';
+  const inc=d.incidents.slice(0,10).map(i=>
+    `<div class="item"><b>${esc(i.crime_type.replace(/_/g,' '))}</b> <span class="mono" style="color:var(--tx3)">${esc(i.fir_no)}</span>
+     <div class="m">${esc(i.date.slice(0,10))} · ${esc(i.city)}, ${esc(i.state)} · severity ${i.severity}</div></div>`).join('')||'<div class="m">None.</div>';
+  const ph=d.phones.map(x=>`<div class="mono" style="font-size:11px">${esc(x.msisdn)} <span style="color:var(--tx3)">IMEI ${esc(x.imei||'—')}</span></div>`).join('')||'<div class="m">None.</div>';
+  const ac=d.accounts.map(x=>`<div class="mono" style="font-size:11px">${esc(x.account_number)} <span style="color:var(--tx3)">${esc(x.bank)}</span> ${x.is_mule?'<span class="pill p-hi">mule</span>':''}</div>`).join('')||'<div class="m">None.</div>';
+  const an=(d.anomalies||[]).slice(0,5).map(x=>`<div class="item"><b>${esc(x.pattern.replace(/_/g,' '))}</b><div class="m">${esc(x.description.slice(0,150))}</div></div>`).join('')||'<div class="m">None flagged.</div>';
+  const hl=(d.hidden_links||[]).slice(0,5).map(x=>{const o=x.person_a===p.person_id?x.name_b:x.name_a;
+    return `<div class="item"><b>${esc(o)}</b> <span class="pill ${x.finding_type==='EVIDENTIAL'?'p-ac':'p-pu'}">${x.finding_type}</span><div class="m">${esc(x.mechanism.replace(/_/g,' '))}</div></div>`;}).join('')||'<div class="m">None.</div>';
+
+  $('#detail').innerHTML=`
+   <div class="dh">${esc(p.full_name)}</div>
+   ${p.alias?`<div class="da">alias “${esc(p.alias)}”</div>`:''}
+   <div class="flex" style="margin-bottom:4px">
+     <span class="pill ${p.risk_score>=75?'p-hi':p.risk_score>=45?'p-md':'p-lo'}">risk ${p.risk_score}</span>
+     <span class="pill p-nu">${esc(p.custody_status||p.person_type)}</span>
+     ${a.rank?`<span class="pill p-ac">influence #${a.rank}</span>`:''}
+   </div>
+   <div class="sec">Identity</div>
+   <div class="kv"><span>Record</span><span class="mono">${esc(p.person_id)}</span></div>
+   <div class="kv"><span>DOB</span><span>${esc(p.date_of_birth)} (age ${p.age})</span></div>
+   <div class="kv"><span>Native</span><span>${esc(p.native_area)}, ${esc(p.native_city)}, ${esc(p.native_state)}</span></div>
+   ${p.based_abroad_in?`<div class="kv"><span>Abroad</span><span style="color:var(--hi)">${esc(p.based_abroad_in)}</span></div>`:''}
+   <div class="kv"><span>Recorded role</span><span>${esc(p.role||'—')} ${p.syndicate_code?'· '+esc(p.syndicate_code):''}</span></div>
+   ${a.inferred_role?`<div class="kv"><span>Inferred</span><span style="color:var(--ac)">${esc(a.inferred_role)}</span></div>`:''}
+   ${a.direct_subordinates!=null?`<div class="kv"><span>Command</span><span>${a.direct_subordinates} direct · ${a.subordinate_span} in span</span></div>`:''}
+   <div class="sec">Relationships (${d.relationships.length})</div>${rel}
+   <div class="sec">Hidden links</div>${hl}
+   <div class="sec">Flagged patterns</div>${an}
+   <div class="sec">Incidents (${d.incidents.length})</div>${inc}
+   <div class="sec">Phones</div>${ph}
+   <div class="sec">Accounts</div>${ac}`;
+}
+
+/* ─────────── search ─────────── */
+let stO;
+$('#search').addEventListener('input',e=>{clearTimeout(stO);const q=e.target.value.trim();
+  if(q.length<2){$('#results').style.display='none';return;}
+  stO=setTimeout(async()=>{const d=await api('/api/search?q='+encodeURIComponent(q));
+    $('#results').innerHTML=d.results.map(r=>
+      `<div class="res" onclick="pick('${r.type}','${r.id}')"><div class="t">${r.type}</div>
+       <b>${esc(r.label)}</b>${r.alias?` <span style="color:var(--hi)">@ ${esc(r.alias)}</span>`:''}
+       <div style="color:var(--tx2);font-size:11px">${esc(r.detail||'')}</div></div>`).join('')||'<div class="res">No match.</div>';
+    $('#results').style.display='block';},170);});
+addEventListener('click',e=>{if(!e.target.closest('.searchwrap'))$('#results').style.display='none';});
+function pick(type,id){$('#results').style.display='none';$('#search').value='';
+  if(type==='Person'){go('network');selectNode(id);}else alert(type+' '+id);}
+
+/* ─────────── views ─────────── */
+async function go(id){
+  CUR=id;
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('on'));
+  document.querySelectorAll('.nav').forEach(n=>n.classList.toggle('on',n.dataset.id===id));
+  $('#v-'+id).classList.add('on');
+  const f={key:vKey,anom:vAnom,links:vLinks,res:vRes,comm:vComm,path:vPath,score:vScore,audit:vAudit}[id];
+  if(f)await f();
+}
+
+async function vKey(){
+  const el=$('#v-key');
+  el.innerHTML=`<h2>Key Players</h2><div class="sub">Three rankings, deliberately kept separate. <b>Command</b> uses the direction of authority-bearing relations ("reports to", "handler of") — measured on this data, kingpins sit at median betweenness rank 8 in the intelligence layer but 123 once calls and money are fused in, so topology alone hides them. <b>Broker</b> finds who connects otherwise-separate groups. <b>Influence</b> blends both.</div>
+   <div class="flex"><button class="btn on" data-r="influence" onclick="kpr('influence',this)">Influence</button>
+   <button class="btn" data-r="command" onclick="kpr('command',this)">Command</button>
+   <button class="btn" data-r="broker" onclick="kpr('broker',this)">Broker</button></div><div id="kpt"></div>`;
+  kpr('influence');
+}
+async function kpr(r,btn){
+  if(btn)document.querySelectorAll('#v-key .btn').forEach(b=>b.classList.toggle('on',b===btn));
+  const d=await api('/api/keyplayers?ranking='+r+'&limit=60');
+  $('#kpt').innerHTML=`<table><tr><th>#</th><th>Name</th><th>Inferred position</th><th>Score</th><th>Command</th><th>Broker</th><th>Deg</th><th>Groups</th><th>Recorded</th></tr>`+
+   d.results.map((x,i)=>`<tr class="clk" onclick="go('network');selectNode('${x.person_id}')">
+    <td class="mono">${i+1}</td><td><b>${esc(x.name)}</b>${x.alias?`<div style="color:var(--hi);font-size:11px">@ ${esc(x.alias)}</div>`:''}</td>
+    <td><span class="pill ${x.inferred_role.includes('APEX')?'p-hi':x.inferred_role.includes('BROKER')?'p-pu':'p-ac'}">${esc(x.inferred_role)}</span></td>
+    <td><div class="bar"><i style="width:${(x.influence_score*100).toFixed(0)}%"></i></div></td>
+    <td class="mono">${x.command_score.toFixed(2)}<span style="color:var(--tx3)"> ·${x.direct_subordinates}/${x.subordinate_span}</span></td>
+    <td class="mono">${x.broker_score.toFixed(2)}</td><td class="mono">${x.degree}</td>
+    <td class="mono">${(x.communities_touched*100).toFixed(0)}%</td>
+    <td style="color:var(--tx2)">${esc(x.role_recorded)}</td></tr>`).join('')+`</table>`;
+}
+
+async function vAnom(){
+  const d=await api('/api/anomalies?limit=200');
+  const pats=Object.entries(d.patterns).sort((a,b)=>b[1]-a[1]);
+  $('#v-anom').innerHTML=`<h2>Suspicious Patterns</h2>
+   <div class="sub">Seven detectors over financial and communication records. Every finding carries the records that triggered it — an alert without its evidence still costs an analyst the same time to dismiss.</div>
+   <div class="flex"><button class="btn on" onclick="anf('',this)">All (${d.count})</button>
+   ${pats.map(([p,n])=>`<button class="btn" onclick="anf('${p}',this)">${p.replace(/_/g,' ')} (${n})</button>`).join('')}</div>
+   <div id="ant"></div>`;
+  anf('');
+}
+async function anf(p,btn){
+  if(btn)document.querySelectorAll('#v-anom .btn').forEach(b=>b.classList.toggle('on',b===btn));
+  const d=await api('/api/anomalies?limit=120&pattern='+p);
+  $('#ant').innerHTML=d.results.map(a=>`<div class="card">
+    <h4><span class="pill ${a.risk_score>=.8?'p-hi':a.risk_score>=.55?'p-md':'p-nu'}">${a.risk_score.toFixed(2)}</span>
+    ${esc(a.pattern.replace(/_/g,' '))} <span class="mono" style="color:var(--tx3);font-weight:400">${esc(a.finding_id)}</span></h4>
+    <div>${esc(a.description)}</div>
+    <div style="margin-top:6px;font-size:11px;color:var(--tx2)">
+      ${(a.person_ids||[]).slice(0,6).map(pid=>`<a onclick="go('network');selectNode('${pid}')" style="color:var(--ac);cursor:pointer">${esc(pid)}</a>`).join(' · ')}
+      ${a.window_start?`<span style="color:var(--tx3)"> — window ${esc(String(a.window_start).slice(0,16))} → ${esc(String(a.window_end).slice(0,16))}</span>`:''}</div>
+    <div class="ev">${esc(JSON.stringify(a.evidence,null,1).slice(0,700))}</div>
+    <div class="acts">
+      <span class="act a-ok" onclick="rev('anomaly','${a.finding_id}','CONFIRMED',this)">Confirm</span>
+      <span class="act a-no" onclick="rev('anomaly','${a.finding_id}','REJECTED',this)">Reject</span>
+      <span class="act a-df" onclick="rev('anomaly','${a.finding_id}','DEFERRED',this)">Defer</span></div>
+   </div>`).join('')||'<div class="ph">No findings.</div>';
+}
+
+async function vLinks(){
+  const d=await api('/api/links?limit=150');
+  $('#v-links').innerHTML=`<h2>Hidden Links</h2>
+   <div class="sub">Pairs with <b>no recorded relationship</b> that the evidence nonetheless ties together. <b>Evidential</b> links name a concrete artefact — one handset carrying both SIMs, one account both operate, one vehicle at both scenes. <b>Inferred</b> links are structural hypotheses only. Nothing here is written into the graph.</div>
+   <div class="warn">None of these are confirmed. Each requires an analyst decision before it is treated as a relationship.</div>
+   <div class="flex"><button class="btn on" onclick="lkf('',this)">All (${d.count})</button>
+    <button class="btn" onclick="lkf('EVIDENTIAL',this)">Evidential</button>
+    <button class="btn" onclick="lkf('INFERRED',this)">Inferred</button></div><div id="lkt"></div>`;
+  lkf('');
+}
+async function lkf(t,btn){
+  if(btn)document.querySelectorAll('#v-links .btn').forEach(b=>b.classList.toggle('on',b===btn));
+  const d=await api('/api/links?limit=120&finding_type='+t);
+  $('#lkt').innerHTML=d.results.map(l=>`<div class="card">
+    <h4><span class="pill ${l.finding_type==='EVIDENTIAL'?'p-ac':'p-pu'}">${l.finding_type}</span>
+      <a onclick="go('network');selectNode('${l.person_a}')" style="color:var(--tx);cursor:pointer">${esc(l.name_a)}</a>
+      <span style="color:var(--tx3)">↔</span>
+      <a onclick="go('network');selectNode('${l.person_b}')" style="color:var(--tx);cursor:pointer">${esc(l.name_b)}</a>
+      ${l.crosses_recorded_groups?'<span class="pill p-hi">crosses groups</span>':''}
+      <span class="mono" style="color:var(--tx3);font-weight:400">conf ${l.confidence}</span></h4>
+    <div style="color:var(--tx2)">${esc(l.description)}</div>
+    <div style="margin-top:5px;font-size:11px;color:var(--tx3)">${esc(l.mechanism.replace(/\|/g,' + ').replace(/_/g,' '))} · ${esc(l.syndicate_a)} ↔ ${esc(l.syndicate_b)}</div>
+    <div class="acts">
+      <span class="act a-ok" onclick="rev('link','${l.link_id}','CONFIRMED',this)">Confirm link</span>
+      <span class="act a-no" onclick="rev('link','${l.link_id}','REJECTED',this)">Reject</span>
+      <span class="act a-df" onclick="rev('link','${l.link_id}','DEFERRED',this)">Defer</span></div></div>`).join('')||'<div class="ph">None.</div>';
+}
+
+async function vRes(){
+  const d=await api('/api/resolution?limit=150');
+  $('#v-res').innerHTML=`<h2>Identity Review — possible duplicate records</h2>
+   <div class="sub">${esc(d.note)} This corpus deliberately contains different people who share an identical full name; a system that merges on name similarity fails on every one of them.</div>
+   <div class="flex">${Object.entries(d.bands).map(([b,n],i)=>`<button class="btn ${i===0?'on':''}" onclick="rsf('${b}',this)">${b} (${n})</button>`).join('')}
+    <button class="btn" onclick="rsf('',this)">All</button></div><div id="rst"></div>`;
+  rsf(Object.keys(d.bands)[0]||'');
+}
+async function rsf(b,btn){
+  if(btn)document.querySelectorAll('#v-res .btn').forEach(x=>x.classList.toggle('on',x===btn));
+  const d=await api('/api/resolution?limit=120&band='+b);
+  $('#rst').innerHTML=d.results.map(p=>{const e=p.evidence;
+   return `<div class="card">
+    <h4><span class="pill ${p.confidence_band==='HIGH'?'p-hi':p.confidence_band==='MEDIUM'?'p-md':'p-nu'}">${p.confidence_band} ${p.match_score.toFixed(2)}</span>
+     ${esc(p.name_a)} <span style="color:var(--tx3)">vs</span> ${esc(p.name_b)}</h4>
+    <div style="color:var(--tx2)">${esc(p.explanation)}</div>
+    <table style="margin-top:8px;font-size:11.5px"><tr><th></th><th>Record A</th><th>Record B</th></tr>
+     <tr><td style="color:var(--tx3)">id</td><td class="mono">${esc(p.record_a)}</td><td class="mono">${esc(p.record_b)}</td></tr>
+     <tr><td style="color:var(--tx3)">dob</td><td>${esc(p.dob_a)}</td><td>${esc(p.dob_b)}</td></tr>
+     <tr><td style="color:var(--tx3)">district</td><td>${esc(p.district_a)}</td><td>${esc(p.district_b)}</td></tr></table>
+    <div class="ev">name ${e.name_similarity} · phonetic ${e.phonetic_match} · dob ${e.dob_score} · geo ${e.geo_score} · shared phones ${(e.shared_phones||[]).join(', ')||'none'} · shared associates ${(e.shared_neighbours||[]).length}</div>
+    <div class="acts">
+      <span class="act a-ok" onclick="rev('resolution','${p.record_a}~${p.record_b}','CONFIRMED',this)">Same person</span>
+      <span class="act a-no" onclick="rev('resolution','${p.record_a}~${p.record_b}','REJECTED',this)">Different people</span>
+      <span class="act a-df" onclick="rev('resolution','${p.record_a}~${p.record_b}','DEFERRED',this)">Need more</span></div></div>`;}).join('')||'<div class="ph">None.</div>';
+}
+
+async function vComm(){
+  const d=await api('/api/communities'),dis=await api('/api/disruption');
+  $('#v-comm').innerHTML=`<h2>Detected Networks</h2>
+   <div class="sub">Groups found by community detection over the fused evidence graph — not read from any label. Each is profiled by what its members actually did.</div>
+   <div class="grid">${d.communities.slice(0,16).map(c=>`<div class="metric">
+     <div style="display:flex;justify-content:space-between;align-items:center">
+      <span class="v" style="color:${PAL[c.community%PAL.length]}">#${c.community}</span>
+      <span class="pill p-nu">${c.size} members</span></div>
+     <div class="l">avg risk ${c.avg_risk}</div>
+     <div class="d"><b>${(c.top_crimes||[]).slice(0,3).map(x=>x.replace(/_/g,' ').toLowerCase()).join(', ')}</b></div>
+     <div class="d" style="color:var(--tx3)">${(c.top_states||[]).join(' · ')}</div>
+     <div class="d">Leaders: ${(c.likely_leaders||[]).slice(0,2).map(l=>`<a onclick="go('network');selectNode('${l.person_id}')" style="color:var(--ac);cursor:pointer">${esc(l.name)}</a>`).join(', ')}</div>
+     <div class="d" style="color:var(--tx3)">purity vs recorded group: ${(c.purity*100).toFixed(0)}%</div>
+     <div style="margin-top:7px"><button class="btn" onclick="showComm(${c.community})">View network</button></div>
+    </div>`).join('')}</div>
+   <h2 style="margin-top:22px">Disruption Simulation</h2>
+   <div class="sub">If you can arrest <i>k</i> people, which <i>k</i> hurt this network most? Targeting by the key-player score, compared against the obvious baseline of arresting the most-connected.</div>
+   <table><tr><th>Arrests</th><th>Key-player targeting → largest remaining group</th><th>Fragments</th><th>Most-connected baseline</th><th>Fragments</th></tr>
+   ${dis.simulation.map(r=>`<tr><td class="mono">${r.budget}</td>
+     <td class="mono" style="color:var(--ok)">${NF(r.key_player_targeting.largest_component)} (${r.key_player_targeting.largest_component_pct}%)</td>
+     <td class="mono">${r.key_player_targeting.n_components}</td>
+     <td class="mono" style="color:var(--tx2)">${NF(r.degree_baseline.largest_component)} (${r.degree_baseline.largest_component_pct}%)</td>
+     <td class="mono">${r.degree_baseline.n_components}</td></tr>`).join('')}</table>`;
+}
+async function showComm(c){go('network');const d=await api(`/api/graph?community=${c}&min_corroboration=1&limit=260`);setGraph(d);legend(d);}
+
+function vPath(){
+  $('#v-path').innerHTML=`<h2>Connection Finder</h2>
+   <div class="sub">How are two people connected? Searches every evidence type — a chain may run person → phone → handset → phone → person, and each hop is spelled out in words.</div>
+   <div class="flex">
+     <input id="pa" placeholder="Person A id or name" style="background:var(--panel);border:1px solid var(--line2);color:var(--tx);padding:7px 10px;border-radius:5px;width:230px">
+     <input id="pb" placeholder="Person B id or name" style="background:var(--panel);border:1px solid var(--line2);color:var(--tx);padding:7px 10px;border-radius:5px;width:230px">
+     <select id="pm"><option value="shortest">Shortest path</option><option value="all">All paths ≤4 hops</option></select>
+     <button class="btn on" onclick="findPath()">Trace</button>
+     <button class="btn" onclick="randomPair()">Random pair</button></div>
+   <div id="pres"></div>`;
+}
+async function resolveId(v){v=v.trim();if(/^P\d+$/i.test(v))return v.toUpperCase();
+  const d=await api('/api/search?q='+encodeURIComponent(v)+'&limit=1');
+  return d.results.length?d.results[0].id:null;}
+async function randomPair(){const d=await api('/api/keyplayers?limit=40');
+  const a=d.results[Math.floor(Math.random()*d.results.length)],b=d.results[Math.floor(Math.random()*d.results.length)];
+  $('#pa').value=a.person_id;$('#pb').value=b.person_id;findPath();}
+async function findPath(){
+  const a=await resolveId($('#pa').value),b=await resolveId($('#pb').value);
+  if(!a||!b){$('#pres').innerHTML='<div class="ph">Could not resolve one of those.</div>';return;}
+  const d=await api(`/api/path?a=${a}&b=${b}&mode=${$('#pm').value}`);
+  if(!d.paths.length){$('#pres').innerHTML=`<div class="ph">${esc(d.message||'No connection found.')}</div>`;return;}
+  $('#pres').innerHTML=d.paths.map(p=>`<div class="path">
+    <b>${p.length} hops</b> — ${p.nodes.map(n=>`<span class="pill p-nu">${esc(n.type)}</span> ${esc(n.label)}`).join(' <span style="color:var(--tx3)">→</span> ')}
+    <div class="hop">${esc(p.narrative)}</div></div>`).join('');
+}
+
+async function vScore(){
+  const s=await api('/api/scorecard'),su=await api('/api/summary');
+  const na=s.network_analytics||{},er=s.entity_resolution||{},an=s.anomalies||{},hl=s.hidden_links||{},ner=s.ner||{};
+  const M=(v,l,d)=>`<div class="metric"><div class="v">${v}</div><div class="l">${l}</div><div class="d">${d||''}</div></div>`;
+  $('#v-score').innerHTML=`<h2>Accuracy Scorecard</h2>
+   <div class="sub">Every number is measured against the ground truth shipped with the dataset — the planted syndicates, key players, duplicates, anomalies and hidden links. Real seized data has no answer key, so none of this could be computed on it.</div>
+   <div class="grid">
+     ${M((ner.typed?.f1??0).toFixed(3),'Entity extraction F1','typed, '+NF(ner.documents)+' documents')}
+     ${M((na.influence_vs_ANY_KEY_PLAYER?.['precision@25']??0).toFixed(2),'Key players P@25','of top 25, share who are true key players')}
+     ${M((na.community_detection?.adjusted_rand_index??0).toFixed(3),'Community ARI','vs planted syndicates')}
+     ${M((er.MEDIUM?.recall??0).toFixed(3),'Duplicate recall','at the review threshold')}
+     ${M(er.MEDIUM?`${er.MEDIUM.namesakes_escalated}/${er.MEDIUM.namesakes_total}`:'—','Namesakes wrongly escalated','identical names, different people')}
+     ${M((an._overall?.recall??0).toFixed(2),'Anomaly recall','across 7 planted patterns')}
+     ${M((hl._overall?.recall??0).toFixed(2),'Hidden link recall',NF(hl._overall?.total_candidates_raised)+' candidates raised')}
+     ${M('0','Automatic merges','every proposal awaits a human')}
+   </div>
+   <h2 style="margin-top:20px">Detail</h2>
+   <table><tr><th>Task</th><th>Metric</th><th>Value</th></tr>
+   ${Object.entries(na).filter(([k])=>k!=='community_detection').map(([k,v])=>
+     `<tr><td>${esc(k.replace(/_/g,' '))}</td><td class="mono">P@10 / P@25 / R@100 / AP</td>
+      <td class="mono">${v['precision@10'].toFixed(2)} / ${v['precision@25'].toFixed(2)} / ${v['recall@100'].toFixed(2)} / ${v.average_precision.toFixed(3)}</td></tr>`).join('')}
+   ${Object.entries(an).filter(([k])=>!k.startsWith('_')).map(([k,v])=>
+     `<tr><td>anomaly · ${esc(k.replace(/_/g,' ').toLowerCase())}</td><td class="mono">recall (found/planted)</td>
+      <td class="mono">${v.recall.toFixed(2)} (${v.detected}/${v.planted})</td></tr>`).join('')}
+   ${Object.entries(hl).filter(([k])=>!k.startsWith('_')).map(([k,v])=>
+     `<tr><td>hidden link · ${esc(k.replace(/_/g,' ').toLowerCase())}</td><td class="mono">recall</td>
+      <td class="mono">${v.recall.toFixed(2)} (${v.found}/${v.planted})</td></tr>`).join('')}
+   </table>
+   <div class="warn" style="margin-top:16px">${esc(su.synthetic_data_notice)}</div>`;
+}
+
+async function vAudit(){
+  const d=await api('/api/review?limit=200');
+  $('#v-audit').innerHTML=`<h2>Decision Log</h2>
+   <div class="sub">Nothing in this system becomes confirmed without a recorded human decision. This is that record — who decided what, and when.</div>
+   ${d.count?`<table><tr><th>Recorded</th><th>Type</th><th>Item</th><th>Decision</th><th>Analyst</th></tr>
+   ${d.entries.map(e=>`<tr><td class="mono">${esc(e.recorded_at)}</td><td>${esc(e.item_type)}</td>
+    <td class="mono">${esc(e.item_id)}</td>
+    <td><span class="pill ${e.decision==='CONFIRMED'?'p-lo':e.decision==='REJECTED'?'p-hi':'p-nu'}">${esc(e.decision)}</span></td>
+    <td>${esc(e.analyst)}</td></tr>`).join('')}</table>`
+   :'<div class="ph">No decisions recorded yet. Confirm or reject something in Suspicious Patterns, Hidden Links or Identity Review.</div>'}`;
+}
+
+async function rev(kind,id,decision,el){
+  await fetch('/api/review',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({item_type:kind,item_id:id,decision:decision,analyst:'analyst'})});
+  const p=el.parentElement;
+  p.innerHTML=`<span class="pill ${decision==='CONFIRMED'?'p-lo':decision==='REJECTED'?'p-hi':'p-nu'}">${decision} — recorded in decision log</span>`;
+}
+
+/* ─────────── boot ─────────── */
+(async function(){
+  $('#nav').innerHTML=NAVS.map(n=>n.s?`<div class="navsec">${n.s}</div>`
+    :`<div class="nav ${n.id==='network'?'on':''}" data-id="${n.id}" data-k="${n.k||''}" onclick="go('${n.id}')"><span>${n.t}</span><span class="n" id="n-${n.id}"></span></div>`).join('');
+  SUM=await api('/api/summary');
+  const D=SUM.dataset,F=SUM.findings;
+  $('#hstats').innerHTML=`<span><b>${NF(D.persons)}</b> persons</span><span><b>${NF(D.incidents)}</b> FIRs</span>
+    <span><b>${NF(D.cdr_records)}</b> CDR</span><span><b>${NF(D.transactions)}</b> txns</span>
+    <span><b>${NF(SUM.graph?.edges)}</b> links</span>`;
+  $('#n-anom').textContent=NF(F.anomalies);$('#n-links').textContent=NF(F.hidden_links);
+  $('#n-res').textContent=NF(F.resolution_proposals);$('#n-key').textContent=NF(SUM.graph?.communities)+' grp';
+  const syn=[...new Set((await api('/api/keyplayers?limit=400')).results.map(r=>r.syndicate_recorded))].filter(Boolean).sort();
+  $('#synf').innerHTML='<option value="">All syndicates</option>'+syn.map(s=>`<option>${s}</option>`).join('');
+  $('#lblBtn').classList.add('on');
+  resize();await loadOverview();
+})();
+</script>
+</body>
+</html>

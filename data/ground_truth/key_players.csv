@@ -1,0 +1,86 @@
+person_id,name,alias,syndicate_code,key_player_type,expected_signal,influence_score
+P000012,Vishal Shinde,Vishal Chikna,SYN-EXT,LIEUTENANT,HIGH degree centrality within community,0.819
+P000013,Mushtaq Baig,,SYN-EXT,LIEUTENANT,HIGH degree centrality within community,0.778
+P000015,Swapnil Bhoir,,SYN-EXT,LIEUTENANT,HIGH degree centrality within community,0.754
+P000018,Salim Saifi,,SYN-EXT,LIEUTENANT,HIGH degree centrality within community,0.671
+P000035,Sachin Bhosale,,SYN-EXT,KINGPIN,"LOW degree centrality, HIGH betweenness / eigenvector via lieutenants",0.906
+P000081,Sandip Salunkhe,Sandip Pehalwan,SYN-EXT,KINGPIN,"LOW degree centrality, HIGH betweenness / eigenvector via lieutenants",0.916
+P000091,Shahnawaz Hussain,,SYN-EXT,LIEUTENANT,HIGH degree centrality within community,0.69
+P000121,Ashfaq Saifi,Doctor Ashfaq,SYN-HER,LIEUTENANT,HIGH degree centrality within community,0.862
+P000127,Nadeem Mirza,,SYN-HER,LIEUTENANT,HIGH degree centrality within community,0.868
+P000128,Jasbir Kang,,SYN-HER,LIEUTENANT,HIGH degree centrality within community,0.814
+P000140,Bhanwari Jat,Bhanwari Bada,SYN-HER,KINGPIN,"LOW degree centrality, HIGH betweenness / eigenvector via lieutenants",1.006
+P000156,Paramjit Gill,,SYN-HER,LIEUTENANT,HIGH degree centrality within community,0.768
+P000181,Satish Rajput,,SYN-CYB,KINGPIN,"LOW degree centrality, HIGH betweenness / eigenvector via lieutenants",1.046
+P000205,Anup Adhikari,Bhai,SYN-CYB,LIEUTENANT,HIGH degree centrality within community,0.909
+P000219,Jagdish Tomar,Jagdish Kabootar,SYN-CYB,LIEUTENANT,HIGH degree centrality within community,0.784
+P000229,Abdul Sheikh,Abdul Cheetah,SYN-CYB,LIEUTENANT,HIGH degree centrality within community,0.784
+P000243,Reshma Hussain,,SYN-CYB,LIEUTENANT,HIGH degree centrality within community,0.838
+P000257,Sarfaraz Zaidi,Sarkar Sarfaraz,SYN-CYB,LIEUTENANT,HIGH degree centrality within community,0.85
+P000268,Deepak Sengar,Deepak Tinku,SYN-CYB,LIEUTENANT,HIGH degree centrality within community,0.805
+P000288,Gautam Ghosh,Langda,SYN-CYB,KINGPIN,"LOW degree centrality, HIGH betweenness / eigenvector via lieutenants",0.884
+P000295,Imran Saifi,Imran Gullu,SYN-HAW,LIEUTENANT,HIGH degree centrality within community,0.695
+P000296,Salim Baig,,SYN-HAW,LIEUTENANT,HIGH degree centrality within community,0.7
+P000305,Manoj Chauhan,,SYN-HAW,LIEUTENANT,HIGH degree centrality within community,0.842
+P000318,Sarfaraz Shaikh,Sarfaraz Doctor,SYN-HAW,LIEUTENANT,HIGH degree centrality within community,0.841
+P000343,Hardik Zala,,SYN-HAW,KINGPIN,"LOW degree centrality, HIGH betweenness / eigenvector via lieutenants",0.873
+P000359,Shivanna Kamath,,SYN-MIN,LIEUTENANT,HIGH degree centrality within community,0.71
+P000370,Yallappa Angadi,,SYN-MIN,LIEUTENANT,HIGH degree centrality within community,0.767
+P000384,Deepak Gupta,Pehalwan Deepak,SYN-MIN,LIEUTENANT,HIGH degree centrality within community,0.79
+P000397,Selvam Gounder,Chacha Selvam,SYN-MIN,KINGPIN,"LOW degree centrality, HIGH betweenness / eigenvector via lieutenants",1.007
+P000426,Ibrahim Mirza,Doctor Ibrahim,SYN-TRF,LIEUTENANT,HIGH degree centrality within community,0.696
+P000429,Tapan Biswas,Chacha Tapan,SYN-TRF,LIEUTENANT,HIGH degree centrality within community,0.764
+P000431,Bikash Roy,Bikash Lambu,SYN-TRF,LIEUTENANT,HIGH degree centrality within community,0.767
+P000464,Vinod Rajput,,SYN-TRF,KINGPIN,"LOW degree centrality, HIGH betweenness / eigenvector via lieutenants",0.83
+P000472,Manoj Kashyap,,SYN-ARM,LIEUTENANT,HIGH degree centrality within community,0.667
+P000497,Prakash Thakur,Lambu Prakash,SYN-ARM,KINGPIN,"LOW degree centrality, HIGH betweenness / eigenvector via lieutenants",0.929
+P000498,Chandrabhan Srivastava,Chacha Chandrabhan,SYN-ARM,LIEUTENANT,HIGH degree centrality within community,0.662
+P000551,Abdul Idrisi,Abdul Lambu,SYN-VEH,LIEUTENANT,HIGH degree centrality within community,0.724
+P000555,Dinesh Gupta,Dinesh Raja,SYN-VEH,LIEUTENANT,HIGH degree centrality within community,0.848
+P000556,Zubair Saifi,,SYN-VEH,KINGPIN,"LOW degree centrality, HIGH betweenness / eigenvector via lieutenants",0.972
+P000561,Nirmal Gill,,SYN-VEH,LIEUTENANT,HIGH degree centrality within community,0.885
+P000579,Shanti Kushwaha,,SYN-FIC,LIEUTENANT,HIGH degree centrality within community,0.881
+P000580,Nepal Mondal,,SYN-FIC,LIEUTENANT,HIGH degree centrality within community,0.801
+P000610,Nirmal Bose,Kallu Nirmal,SYN-FIC,KINGPIN,"LOW degree centrality, HIGH betweenness / eigenvector via lieutenants",0.961
+P000612,Sudhakar Prasad,Sudhakar Chikna,SYN-GAN,LIEUTENANT,HIGH degree centrality within community,0.793
+P000615,Mallesh Yadav,,SYN-GAN,LIEUTENANT,HIGH degree centrality within community,0.779
+P000625,Perumal Sundaram,,SYN-GAN,KINGPIN,"LOW degree centrality, HIGH betweenness / eigenvector via lieutenants",1.134
+P000633,Arivazhagan Mudaliar,Arivazhagan Anna,SYN-GAN,LIEUTENANT,HIGH degree centrality within community,0.813
+P000693,Arun Chauhan,,SYN-PON,LIEUTENANT,HIGH degree centrality within community,0.937
+P000695,Basanta Mallick,Basanta Pappu,SYN-PON,KINGPIN,"LOW degree centrality, HIGH betweenness / eigenvector via lieutenants",0.828
+P000707,Akshaya Sahoo,,SYN-PON,LIEUTENANT,HIGH degree centrality within community,0.792
+P000722,Ashwin Shah,Ashwin Master,SYN-BET,LIEUTENANT,HIGH degree centrality within community,0.865
+P000725,Altaf Khan,Bandook Altaf,SYN-BET,LIEUTENANT,HIGH degree centrality within community,0.704
+P000729,Vinod Bhadauria,Vinod Tempo,SYN-BET,LIEUTENANT,HIGH degree centrality within community,0.658
+P000737,Sachin Patil,Munna,SYN-BET,KINGPIN,"LOW degree centrality, HIGH betweenness / eigenvector via lieutenants",1.133
+P000792,Nazia Khan,Nazia Bandook,SYN-KDN,LIEUTENANT,HIGH degree centrality within community,0.701
+P000794,Wasim Hussain,,SYN-KDN,LIEUTENANT,HIGH degree centrality within community,0.691
+P000797,Imran Ahmed,Tinku Imran,SYN-KDN,KINGPIN,"LOW degree centrality, HIGH betweenness / eigenvector via lieutenants",0.913
+P000830,Harpreet Sandhu,Harpreet Master,SYN-SHK,KINGPIN,"LOW degree centrality, HIGH betweenness / eigenvector via lieutenants",0.88
+P000833,Sukhdev Singh,Sukhdev Gullu,SYN-SHK,LIEUTENANT,HIGH degree centrality within community,0.733
+P000843,Ranveer Kumawat,,SYN-SHK,LIEUTENANT,HIGH degree centrality within community,0.745
+P000848,Nagaraju Gupta,,SYN-WLD,LIEUTENANT,HIGH degree centrality within community,0.821
+P000859,Thangaraj Naicker,Thangaraj Munna,SYN-WLD,KINGPIN,"LOW degree centrality, HIGH betweenness / eigenvector via lieutenants",0.823
+P000873,Bikram Basumatary,Bikram Cheetah,SYN-WLD,LIEUTENANT,HIGH degree centrality within community,0.907
+P000368,Dinesh Rathore,Dinesh Kallu,SYN-MIN,BROKER,HIGH betweenness across communities; low within-community degree,0.867
+P000312,Anoop Kurup,Baba Anoop,SYN-HAW,BROKER,HIGH betweenness across communities; low within-community degree,0.934
+P000245,Kartik Adhikari,Kartik Lambu,SYN-CYB,BROKER,HIGH betweenness across communities; low within-community degree,0.577
+P000838,Chandrabhan Bhadauria,,SYN-SHK,BROKER,HIGH betweenness across communities; low within-community degree,0.744
+P000834,Jasbir Brar,Kallu Jasbir,SYN-SHK,BROKER,HIGH betweenness across communities; low within-community degree,0.662
+P000563,Malkiat Bains,,SYN-VEH,BROKER,HIGH betweenness across communities; low within-community degree,0.967
+P000354,Shailendra Baghel,Ustad Shailendra,SYN-HAW,BROKER,HIGH betweenness across communities; low within-community degree,0.678
+P000614,Rajendran Muthusamy,,SYN-GAN,BROKER,HIGH betweenness across communities; low within-community degree,0.828
+P000356,Sudha Kushwaha,Dada,SYN-HAW,BROKER,HIGH betweenness across communities; low within-community degree,0.677
+P000593,Ashim Pal,Ashim Raja,SYN-FIC,BROKER,HIGH betweenness across communities; low within-community degree,0.558
+P000511,Rafiq Zaidi,Kaka Rafiq,SYN-ARM,BROKER,HIGH betweenness across communities; low within-community degree,0.562
+P000585,Iqbal Hussain,Iqbal Chacha,SYN-FIC,BROKER,HIGH betweenness across communities; low within-community degree,0.793
+P000594,Sanjib Majumdar,Munna Sanjib,SYN-FIC,BROKER,HIGH betweenness across communities; low within-community degree,0.922
+P000144,Yusuf Baig,,SYN-HER,BROKER,HIGH betweenness across communities; low within-community degree,0.798
+P000129,Kulwant Aulakh,,SYN-HER,BROKER,HIGH betweenness across communities; low within-community degree,0.837
+P000407,Ajay Prajapati,Ajay Lambu,SYN-MIN,BROKER,HIGH betweenness across communities; low within-community degree,0.633
+P000209,Nadeem Rahman,Chikna Nadeem,SYN-CYB,BROKER,HIGH betweenness across communities; low within-community degree,0.573
+P000802,Kishan Jat,Kishan Kabootar,SYN-SHK,BROKER,HIGH betweenness across communities; low within-community degree,0.616
+P000650,Kumaresan Muthusamy,Tinku Kumaresan,SYN-GAN,BROKER,HIGH betweenness across communities; low within-community degree,0.602
+P000853,Rajesh Jaiswal,Cheetah,SYN-WLD,BROKER,HIGH betweenness across communities; low within-community degree,0.612
+P000820,Kulwant Toor,Bhai Kulwant,SYN-SHK,BROKER,HIGH betweenness across communities; low within-community degree,1.0
+P000211,Imran Baig,Dada Imran,SYN-CYB,BROKER,HIGH betweenness across communities; low within-community degree,0.55

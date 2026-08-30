@@ -1,0 +1,30 @@
+{
+ "generated_at": "2026-08-31T01:30:47",
+ "graph": {
+  "nodes": 1391,
+  "edges": 5131,
+  "communities": 29,
+  "modularity": 0.8195
+ },
+ "counts": {
+  "persons": 1694,
+  "incidents": 2200,
+  "documents": 3220,
+  "key_players_ranked": 1391,
+  "resolution_proposals": 229,
+  "anomaly_findings": 846,
+  "hidden_links": 4659,
+  "auto_merges_performed": 0,
+  "auto_confirmed_links": 0,
+  "text_relations_pending_review": 989
+ },
+ "timings_seconds": {
+  "ingest": 1.45,
+  "nlp": 4.32,
+  "graph": 1.03,
+  "analytics": 14.83,
+  "resolution": 0.53,
+  "anomaly": 15.51,
+  "linkpred": 0.35
+ }
+}

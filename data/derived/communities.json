@@ -1,0 +1,1171 @@
+[
+ {
+  "community": 0,
+  "size": 158,
+  "avg_risk": 44.6,
+  "top_crimes": [
+   "MURDER",
+   "RIOTING",
+   "EXTORTION",
+   "ORGANISED_CRIME"
+  ],
+  "top_states": [
+   "Odisha",
+   "Tamil Nadu",
+   "Maharashtra"
+  ],
+  "role_mix": {
+   "FIELD_OPERATIVE": 55,
+   "-": 22,
+   "COURIER": 20,
+   "MULE": 19,
+   "FENCE": 17
+  },
+  "dominant_recorded_syndicate": "UNAFFILIATED",
+  "purity": 0.804,
+  "likely_leaders": [
+   {
+    "person_id": "P000896",
+    "name": "Aslam Khan"
+   },
+   {
+    "person_id": "P000884",
+    "name": "Wasim Mansuri"
+   },
+   {
+    "person_id": "P000887",
+    "name": "Anoop Kartha"
+   },
+   {
+    "person_id": "P000958",
+    "name": "Bhupendra Srivastava"
+   },
+   {
+    "person_id": "P000981",
+    "name": "Ibrahim Shaikh"
+   }
+  ]
+ },
+ {
+  "community": 1,
+  "size": 157,
+  "avg_risk": 44.0,
+  "top_crimes": [
+   "FORGERY",
+   "MONEY_LAUNDERING",
+   "CHEATING_FRAUD",
+   "CYBER_FRAUD"
+  ],
+  "top_states": [
+   "Bihar",
+   "Uttar Pradesh",
+   "Jharkhand"
+  ],
+  "role_mix": {
+   "MULE": 38,
+   "FIELD_OPERATIVE": 30,
+   "-": 22,
+   "TECH_HANDLER": 19,
+   "RECRUITER": 11
+  },
+  "dominant_recorded_syndicate": "SYN-CYB",
+  "purity": 0.777,
+  "likely_leaders": [
+   {
+    "person_id": "P000205",
+    "name": "Anup Adhikari"
+   },
+   {
+    "person_id": "P000219",
+    "name": "Jagdish Tomar"
+   },
+   {
+    "person_id": "P000257",
+    "name": "Sarfaraz Zaidi"
+   },
+   {
+    "person_id": "P000243",
+    "name": "Reshma Hussain"
+   },
+   {
+    "person_id": "P000268",
+    "name": "Deepak Sengar"
+   }
+  ]
+ },
+ {
+  "community": 2,
+  "size": 124,
+  "avg_risk": 48.4,
+  "top_crimes": [
+   "MURDER",
+   "LAND_GRABBING",
+   "CRIMINAL_CONSPIRACY",
+   "ATTEMPT_TO_MURDER"
+  ],
+  "top_states": [
+   "Karnataka",
+   "Delhi",
+   "Maharashtra"
+  ],
+  "role_mix": {
+   "FIELD_OPERATIVE": 32,
+   "MULE": 22,
+   "-": 13,
+   "LOGISTICS": 10,
+   "FINANCIER": 7
+  },
+  "dominant_recorded_syndicate": "SYN-EXT",
+  "purity": 0.815,
+  "likely_leaders": [
+   {
+    "person_id": "P000015",
+    "name": "Swapnil Bhoir"
+   },
+   {
+    "person_id": "P000091",
+    "name": "Shahnawaz Hussain"
+   },
+   {
+    "person_id": "P000018",
+    "name": "Salim Saifi"
+   },
+   {
+    "person_id": "P000012",
+    "name": "Vishal Shinde"
+   },
+   {
+    "person_id": "P000017",
+    "name": "Swapnil Tandel"
+   }
+  ]
+ },
+ {
+  "community": 3,
+  "size": 108,
+  "avg_risk": 49.0,
+  "top_crimes": [
+   "NDPS_TRAFFICKING",
+   "ARMS_ACT",
+   "NDPS_POSSESSION",
+   "CRIMINAL_CONSPIRACY"
+  ],
+  "top_states": [
+   "Punjab",
+   "Rajasthan",
+   "Delhi"
+  ],
+  "role_mix": {
+   "FIELD_OPERATIVE": 18,
+   "MULE": 13,
+   "LOGISTICS": 13,
+   "-": 12,
+   "COURIER": 12
+  },
+  "dominant_recorded_syndicate": "SYN-HER",
+  "purity": 0.815,
+  "likely_leaders": [
+   {
+    "person_id": "P000129",
+    "name": "Kulwant Aulakh"
+   },
+   {
+    "person_id": "P000162",
+    "name": "Amarjit Dhillon"
+   },
+   {
+    "person_id": "P000127",
+    "name": "Nadeem Mirza"
+   },
+   {
+    "person_id": "P000121",
+    "name": "Ashfaq Saifi"
+   },
+   {
+    "person_id": "P000156",
+    "name": "Paramjit Gill"
+   }
+  ]
+ },
+ {
+  "community": 4,
+  "size": 97,
+  "avg_risk": 47.0,
+  "top_crimes": [
+   "FORGERY",
+   "CHEATING_FRAUD",
+   "MONEY_LAUNDERING",
+   "SMUGGLING_CUSTOMS"
+  ],
+  "top_states": [
+   "Telangana",
+   "Maharashtra",
+   "Tamil Nadu"
+  ],
+  "role_mix": {
+   "FIELD_OPERATIVE": 24,
+   "MULE": 15,
+   "-": 13,
+   "HAWALA_OPERATOR": 6,
+   "LOGISTICS": 6
+  },
+  "dominant_recorded_syndicate": "SYN-HAW",
+  "purity": 0.794,
+  "likely_leaders": [
+   {
+    "person_id": "P000318",
+    "name": "Sarfaraz Shaikh"
+   },
+   {
+    "person_id": "P000343",
+    "name": "Hardik Zala"
+   },
+   {
+    "person_id": "P000295",
+    "name": "Imran Saifi"
+   },
+   {
+    "person_id": "P000351",
+    "name": "Shakeel Mirza"
+   },
+   {
+    "person_id": "P000355",
+    "name": "Randhir Sharma"
+   }
+  ]
+ },
+ {
+  "community": 5,
+  "size": 83,
+  "avg_risk": 46.1,
+  "top_crimes": [
+   "ATTEMPT_TO_MURDER",
+   "EXTORTION",
+   "MURDER",
+   "RIOTING"
+  ],
+  "top_states": [
+   "Karnataka",
+   "Bihar",
+   "Rajasthan"
+  ],
+  "role_mix": {
+   "FIELD_OPERATIVE": 17,
+   "MULE": 15,
+   "-": 9,
+   "LOGISTICS": 7,
+   "COURIER": 6
+  },
+  "dominant_recorded_syndicate": "SYN-MIN",
+  "purity": 0.831,
+  "likely_leaders": [
+   {
+    "person_id": "P000370",
+    "name": "Yallappa Angadi"
+   },
+   {
+    "person_id": "P000397",
+    "name": "Selvam Gounder"
+   },
+   {
+    "person_id": "P000359",
+    "name": "Shivanna Kamath"
+   },
+   {
+    "person_id": "P000372",
+    "name": "Rajendran Pillai"
+   },
+   {
+    "person_id": "P000384",
+    "name": "Deepak Gupta"
+   }
+  ]
+ },
+ {
+  "community": 6,
+  "size": 78,
+  "avg_risk": 52.0,
+  "top_crimes": [
+   "FORGERY",
+   "CHEATING_FRAUD",
+   "HUMAN_TRAFFICKING",
+   "CRIMINAL_CONSPIRACY"
+  ],
+  "top_states": [
+   "Delhi",
+   "Haryana",
+   "Karnataka"
+  ],
+  "role_mix": {
+   "MULE": 10,
+   "FIELD_OPERATIVE": 9,
+   "RECRUITER": 9,
+   "LOGISTICS": 9,
+   "-": 7
+  },
+  "dominant_recorded_syndicate": "SYN-TRF",
+  "purity": 0.795,
+  "likely_leaders": [
+   {
+    "person_id": "P000431",
+    "name": "Bikash Roy"
+   },
+   {
+    "person_id": "P000464",
+    "name": "Vinod Rajput"
+   },
+   {
+    "person_id": "P000462",
+    "name": "Kuldeep Pandey"
+   },
+   {
+    "person_id": "P000426",
+    "name": "Ibrahim Mirza"
+   },
+   {
+    "person_id": "P000429",
+    "name": "Tapan Biswas"
+   }
+  ]
+ },
+ {
+  "community": 7,
+  "size": 70,
+  "avg_risk": 48.1,
+  "top_crimes": [
+   "EXTORTION",
+   "MONEY_LAUNDERING",
+   "BETTING_GAMBLING",
+   "CHEATING_FRAUD"
+  ],
+  "top_states": [
+   "Karnataka",
+   "Gujarat",
+   "Delhi"
+  ],
+  "role_mix": {
+   "FIELD_OPERATIVE": 24,
+   "MULE": 10,
+   "-": 9,
+   "RECRUITER": 6,
+   "FINANCIER": 6
+  },
+  "dominant_recorded_syndicate": "SYN-BET",
+  "purity": 0.829,
+  "likely_leaders": [
+   {
+    "person_id": "P000719",
+    "name": "Yusuf Khan"
+   },
+   {
+    "person_id": "P000759",
+    "name": "Devendra Chauhan"
+   },
+   {
+    "person_id": "P000725",
+    "name": "Altaf Khan"
+   },
+   {
+    "person_id": "P000729",
+    "name": "Vinod Bhadauria"
+   },
+   {
+    "person_id": "P000715",
+    "name": "Imran Farooqui"
+   }
+  ]
+ },
+ {
+  "community": 8,
+  "size": 67,
+  "avg_risk": 39.1,
+  "top_crimes": [
+   "MONEY_LAUNDERING",
+   "CHEATING_FRAUD",
+   "CHIT_FUND_PONZI",
+   "FORGERY"
+  ],
+  "top_states": [
+   "Odisha",
+   "Jharkhand",
+   "Assam"
+  ],
+  "role_mix": {
+   "FIELD_OPERATIVE": 17,
+   "MULE": 16,
+   "-": 14,
+   "RECRUITER": 5,
+   "COURIER": 4
+  },
+  "dominant_recorded_syndicate": "SYN-PON",
+  "purity": 0.746,
+  "likely_leaders": [
+   {
+    "person_id": "P000687",
+    "name": "Dinesh Prajapati"
+   },
+   {
+    "person_id": "P000692",
+    "name": "Bimal Halder"
+   },
+   {
+    "person_id": "P000680",
+    "name": "Prakash Dubey"
+   },
+   {
+    "person_id": "P000707",
+    "name": "Akshaya Sahoo"
+   },
+   {
+    "person_id": "P000693",
+    "name": "Arun Chauhan"
+   }
+  ]
+ },
+ {
+  "community": 9,
+  "size": 66,
+  "avg_risk": 52.5,
+  "top_crimes": [
+   "FORGERY",
+   "CHEATING_FRAUD",
+   "ROBBERY",
+   "VEHICLE_THEFT"
+  ],
+  "top_states": [
+   "Delhi",
+   "Haryana",
+   "Bihar"
+  ],
+  "role_mix": {
+   "FIELD_OPERATIVE": 10,
+   "MULE": 8,
+   "-": 7,
+   "FENCE": 6,
+   "LOGISTICS": 5
+  },
+  "dominant_recorded_syndicate": "SYN-VEH",
+  "purity": 0.848,
+  "likely_leaders": [
+   {
+    "person_id": "P000558",
+    "name": "Mahesh Kushwaha"
+   },
+   {
+    "person_id": "P000530",
+    "name": "Ranjit Bajwa"
+   },
+   {
+    "person_id": "P000561",
+    "name": "Nirmal Gill"
+   },
+   {
+    "person_id": "P000551",
+    "name": "Abdul Idrisi"
+   },
+   {
+    "person_id": "P000557",
+    "name": "Haroon Pathan"
+   }
+  ]
+ },
+ {
+  "community": 10,
+  "size": 63,
+  "avg_risk": 48.3,
+  "top_crimes": [
+   "ORGANISED_CRIME",
+   "CRIMINAL_CONSPIRACY",
+   "ARMS_ACT",
+   "MURDER"
+  ],
+  "top_states": [
+   "Madhya Pradesh",
+   "Bihar",
+   "Jharkhand"
+  ],
+  "role_mix": {
+   "MULE": 12,
+   "FIELD_OPERATIVE": 9,
+   "LOGISTICS": 9,
+   "-": 7,
+   "SHOOTER": 6
+  },
+  "dominant_recorded_syndicate": "SYN-ARM",
+  "purity": 0.873,
+  "likely_leaders": [
+   {
+    "person_id": "P000495",
+    "name": "Firoz Mansuri"
+   },
+   {
+    "person_id": "P000498",
+    "name": "Chandrabhan Srivastava"
+   },
+   {
+    "person_id": "P000488",
+    "name": "Aslam Ahmed"
+   },
+   {
+    "person_id": "P000510",
+    "name": "Nazia Saifi"
+   },
+   {
+    "person_id": "P000472",
+    "name": "Manoj Kashyap"
+   }
+  ]
+ },
+ {
+  "community": 11,
+  "size": 62,
+  "avg_risk": 46.9,
+  "top_crimes": [
+   "CRIMINAL_CONSPIRACY",
+   "SMUGGLING_CUSTOMS",
+   "FICN_COUNTERFEIT",
+   "CHEATING_FRAUD"
+  ],
+  "top_states": [
+   "Delhi",
+   "Bihar",
+   "West Bengal"
+  ],
+  "role_mix": {
+   "FIELD_OPERATIVE": 15,
+   "-": 11,
+   "COURIER": 7,
+   "FIXER": 6,
+   "SHOOTER": 4
+  },
+  "dominant_recorded_syndicate": "SYN-FIC",
+  "purity": 0.71,
+  "likely_leaders": [
+   {
+    "person_id": "P000579",
+    "name": "Shanti Kushwaha"
+   },
+   {
+    "person_id": "P000580",
+    "name": "Nepal Mondal"
+   },
+   {
+    "person_id": "P000590",
+    "name": "Shailendra Kashyap"
+   },
+   {
+    "person_id": "P000594",
+    "name": "Sanjib Majumdar"
+   },
+   {
+    "person_id": "P000585",
+    "name": "Iqbal Hussain"
+   }
+  ]
+ },
+ {
+  "community": 12,
+  "size": 61,
+  "avg_risk": 54.3,
+  "top_crimes": [
+   "ARMS_ACT",
+   "ORGANISED_CRIME",
+   "MURDER",
+   "ATTEMPT_TO_MURDER"
+  ],
+  "top_states": [
+   "Haryana",
+   "Maharashtra",
+   "Rajasthan"
+  ],
+  "role_mix": {
+   "SHOOTER": 11,
+   "FIELD_OPERATIVE": 9,
+   "-": 9,
+   "LOGISTICS": 6,
+   "COURIER": 6
+  },
+  "dominant_recorded_syndicate": "SYN-SHK",
+  "purity": 0.803,
+  "likely_leaders": [
+   {
+    "person_id": "P000843",
+    "name": "Ranveer Kumawat"
+   },
+   {
+    "person_id": "P000820",
+    "name": "Kulwant Toor"
+   },
+   {
+    "person_id": "P000833",
+    "name": "Sukhdev Singh"
+   },
+   {
+    "person_id": "P000803",
+    "name": "Malkiat Virk"
+   },
+   {
+    "person_id": "P000834",
+    "name": "Jasbir Brar"
+   }
+  ]
+ },
+ {
+  "community": 13,
+  "size": 57,
+  "avg_risk": 40.9,
+  "top_crimes": [
+   "NDPS_TRAFFICKING",
+   "CRIMINAL_CONSPIRACY",
+   "ARMS_ACT",
+   "NDPS_POSSESSION"
+  ],
+  "top_states": [
+   "Andhra Pradesh",
+   "Odisha",
+   "Tamil Nadu"
+  ],
+  "role_mix": {
+   "MULE": 13,
+   "FIELD_OPERATIVE": 11,
+   "-": 11,
+   "COURIER": 6,
+   "RECRUITER": 4
+  },
+  "dominant_recorded_syndicate": "SYN-GAN",
+  "purity": 0.737,
+  "likely_leaders": [
+   {
+    "person_id": "P000633",
+    "name": "Arivazhagan Mudaliar"
+   },
+   {
+    "person_id": "P000618",
+    "name": "Basanta Behera"
+   },
+   {
+    "person_id": "P000650",
+    "name": "Kumaresan Muthusamy"
+   },
+   {
+    "person_id": "P000612",
+    "name": "Sudhakar Prasad"
+   },
+   {
+    "person_id": "P000624",
+    "name": "Balaraju Nallamothu"
+   }
+  ]
+ },
+ {
+  "community": 14,
+  "size": 46,
+  "avg_risk": 59.0,
+  "top_crimes": [
+   "ARMS_ACT",
+   "EXTORTION",
+   "KIDNAP_FOR_RANSOM",
+   "ORGANISED_CRIME"
+  ],
+  "top_states": [
+   "Bihar",
+   "Jharkhand",
+   "Uttar Pradesh"
+  ],
+  "role_mix": {
+   "FIELD_OPERATIVE": 21,
+   "FINANCIER": 5,
+   "SHOOTER": 4,
+   "TECH_HANDLER": 3,
+   "LOGISTICS": 2
+  },
+  "dominant_recorded_syndicate": "SYN-KDN",
+  "purity": 0.935,
+  "likely_leaders": [
+   {
+    "person_id": "P000783",
+    "name": "Firoz Siddiqui"
+   },
+   {
+    "person_id": "P000797",
+    "name": "Imran Ahmed"
+   },
+   {
+    "person_id": "P000796",
+    "name": "Abdul Malik"
+   },
+   {
+    "person_id": "P000791",
+    "name": "Sarfaraz Saifi"
+   },
+   {
+    "person_id": "P000794",
+    "name": "Wasim Hussain"
+   }
+  ]
+ },
+ {
+  "community": 15,
+  "size": 43,
+  "avg_risk": 56.2,
+  "top_crimes": [
+   "WILDLIFE_TRAFFICKING",
+   "CRIMINAL_CONSPIRACY",
+   "SMUGGLING_CUSTOMS",
+   "FORGERY"
+  ],
+  "top_states": [
+   "West Bengal",
+   "Delhi",
+   "Andhra Pradesh"
+  ],
+  "role_mix": {
+   "MULE": 7,
+   "FINANCIER": 6,
+   "FIELD_OPERATIVE": 6,
+   "FENCE": 5,
+   "FIXER": 4
+  },
+  "dominant_recorded_syndicate": "SYN-WLD",
+  "purity": 0.86,
+  "likely_leaders": [
+   {
+    "person_id": "P000846",
+    "name": "Mahesh Shukla"
+   },
+   {
+    "person_id": "P000850",
+    "name": "Nagaraju Nallamothu"
+   },
+   {
+    "person_id": "P000848",
+    "name": "Nagaraju Gupta"
+   },
+   {
+    "person_id": "P000851",
+    "name": "Ilango Subramanian"
+   },
+   {
+    "person_id": "P000865",
+    "name": "Padma Yadav"
+   }
+  ]
+ },
+ {
+  "community": 16,
+  "size": 25,
+  "avg_risk": 47.1,
+  "top_crimes": [
+   "CRIMINAL_CONSPIRACY",
+   "ARMS_ACT",
+   "NDPS_POSSESSION",
+   "NDPS_TRAFFICKING"
+  ],
+  "top_states": [
+   "Tamil Nadu",
+   "Maharashtra",
+   "Andhra Pradesh"
+  ],
+  "role_mix": {
+   "FIELD_OPERATIVE": 6,
+   "MULE": 5,
+   "-": 4,
+   "LOGISTICS": 2,
+   "SHOOTER": 2
+  },
+  "dominant_recorded_syndicate": "SYN-GAN",
+  "purity": 0.84,
+  "likely_leaders": [
+   {
+    "person_id": "P000615",
+    "name": "Mallesh Yadav"
+   },
+   {
+    "person_id": "P000623",
+    "name": "Saravanan Pillai"
+   },
+   {
+    "person_id": "P000621",
+    "name": "Revathi Mudaliar"
+   },
+   {
+    "person_id": "P000628",
+    "name": "Vetrivel Gounder"
+   },
+   {
+    "person_id": "P000643",
+    "name": "Niranjan Panda"
+   }
+  ]
+ },
+ {
+  "community": 17,
+  "size": 3,
+  "avg_risk": 8.3,
+  "top_crimes": [
+   "CRIMINAL_CONSPIRACY",
+   "MURDER",
+   "MONEY_LAUNDERING",
+   "CHIT_FUND_PONZI"
+  ],
+  "top_states": [
+   "Chhattisgarh",
+   "Tamil Nadu",
+   "Uttar Pradesh"
+  ],
+  "role_mix": {
+   "-": 3
+  },
+  "dominant_recorded_syndicate": "-",
+  "purity": 1.0,
+  "likely_leaders": [
+   {
+    "person_id": "P001032",
+    "name": "Sanjay Tiwari"
+   },
+   {
+    "person_id": "P001376",
+    "name": "Gurpreet Kang"
+   },
+   {
+    "person_id": "P001080",
+    "name": "Sukumar Pal"
+   }
+  ]
+ },
+ {
+  "community": 18,
+  "size": 3,
+  "avg_risk": 6.7,
+  "top_crimes": [
+   "CRIMINAL_CONSPIRACY",
+   "FORGERY",
+   "CHIT_FUND_PONZI",
+   "CHEATING_FRAUD"
+  ],
+  "top_states": [
+   "Chhattisgarh",
+   "Karnataka",
+   "Andhra Pradesh"
+  ],
+  "role_mix": {
+   "-": 3
+  },
+  "dominant_recorded_syndicate": "-",
+  "purity": 1.0,
+  "likely_leaders": [
+   {
+    "person_id": "P001383",
+    "name": "Debashish Halder"
+   },
+   {
+    "person_id": "P001443",
+    "name": "Srinivas Varma"
+   },
+   {
+    "person_id": "P001254",
+    "name": "Lekhraj Kashyap"
+   }
+  ]
+ },
+ {
+  "community": 19,
+  "size": 2,
+  "avg_risk": 8.5,
+  "top_crimes": [
+   "EXTORTION",
+   "CHEATING_FRAUD",
+   "NDPS_TRAFFICKING",
+   "ORGANISED_CRIME"
+  ],
+  "top_states": [
+   "Odisha",
+   "Bihar"
+  ],
+  "role_mix": {
+   "-": 2
+  },
+  "dominant_recorded_syndicate": "-",
+  "purity": 1.0,
+  "likely_leaders": [
+   {
+    "person_id": "P001148",
+    "name": "Kishan Jhala"
+   },
+   {
+    "person_id": "P001020",
+    "name": "Mallesh Yadav"
+   }
+  ]
+ },
+ {
+  "community": 20,
+  "size": 2,
+  "avg_risk": 9.0,
+  "top_crimes": [
+   "MONEY_LAUNDERING",
+   "NDPS_POSSESSION",
+   "FORGERY",
+   "CRIMINAL_CONSPIRACY"
+  ],
+  "top_states": [
+   "Jammu and Kashmir",
+   "Tamil Nadu"
+  ],
+  "role_mix": {
+   "-": 2
+  },
+  "dominant_recorded_syndicate": "-",
+  "purity": 1.0,
+  "likely_leaders": [
+   {
+    "person_id": "P001277",
+    "name": "Bhavesh Shah"
+   },
+   {
+    "person_id": "P001064",
+    "name": "Aarti More"
+   }
+  ]
+ },
+ {
+  "community": 21,
+  "size": 2,
+  "avg_risk": 10.0,
+  "top_crimes": [
+   "CRIMINAL_CONSPIRACY",
+   "EXTORTION",
+   "MURDER",
+   "LAND_GRABBING"
+  ],
+  "top_states": [
+   "Delhi",
+   "Uttar Pradesh"
+  ],
+  "role_mix": {
+   "-": 2
+  },
+  "dominant_recorded_syndicate": "-",
+  "purity": 1.0,
+  "likely_leaders": [
+   {
+    "person_id": "P001500",
+    "name": "Salim Qureshi"
+   },
+   {
+    "person_id": "P001078",
+    "name": "Pramila Munda"
+   }
+  ]
+ },
+ {
+  "community": 22,
+  "size": 2,
+  "avg_risk": 5.5,
+  "top_crimes": [
+   "CRIMINAL_CONSPIRACY",
+   "MONEY_LAUNDERING",
+   "BETTING_GAMBLING",
+   "KIDNAP_FOR_RANSOM"
+  ],
+  "top_states": [
+   "Uttar Pradesh",
+   "Punjab"
+  ],
+  "role_mix": {
+   "-": 2
+  },
+  "dominant_recorded_syndicate": "-",
+  "purity": 1.0,
+  "likely_leaders": [
+   {
+    "person_id": "P001113",
+    "name": "Bhanwar Jhala"
+   },
+   {
+    "person_id": "P001413",
+    "name": "Nilesh Deshmukh"
+   }
+  ]
+ },
+ {
+  "community": 23,
+  "size": 2,
+  "avg_risk": 5.0,
+  "top_crimes": [
+   "MURDER",
+   "ORGANISED_CRIME",
+   "CRIMINAL_CONSPIRACY",
+   "FORGERY"
+  ],
+  "top_states": [
+   "Andhra Pradesh",
+   "Bihar"
+  ],
+  "role_mix": {
+   "-": 2
+  },
+  "dominant_recorded_syndicate": "-",
+  "purity": 1.0,
+  "likely_leaders": [
+   {
+    "person_id": "P001392",
+    "name": "Kamla Thakur"
+   },
+   {
+    "person_id": "P001132",
+    "name": "Pushpa Saini"
+   }
+  ]
+ },
+ {
+  "community": 24,
+  "size": 2,
+  "avg_risk": 7.5,
+  "top_crimes": [
+   "CHEATING_FRAUD",
+   "CRIMINAL_CONSPIRACY",
+   "FORGERY",
+   "NDPS_TRAFFICKING"
+  ],
+  "top_states": [
+   "Bihar",
+   "Odisha"
+  ],
+  "role_mix": {
+   "-": 2
+  },
+  "dominant_recorded_syndicate": "-",
+  "purity": 1.0,
+  "likely_leaders": [
+   {
+    "person_id": "P001405",
+    "name": "Nagesh Angadi"
+   },
+   {
+    "person_id": "P001137",
+    "name": "Poongodi Annadurai"
+   }
+  ]
+ },
+ {
+  "community": 25,
+  "size": 2,
+  "avg_risk": 5.0,
+  "top_crimes": [
+   "MONEY_LAUNDERING",
+   "CRIMINAL_CONSPIRACY",
+   "ORGANISED_CRIME",
+   "EXTORTION"
+  ],
+  "top_states": [
+   "Jammu and Kashmir",
+   "Kerala"
+  ],
+  "role_mix": {
+   "-": 2
+  },
+  "dominant_recorded_syndicate": "-",
+  "purity": 1.0,
+  "likely_leaders": [
+   {
+    "person_id": "P001399",
+    "name": "Rachhpal Mann"
+   },
+   {
+    "person_id": "P001315",
+    "name": "Laxmi Saini"
+   }
+  ]
+ },
+ {
+  "community": 26,
+  "size": 2,
+  "avg_risk": 5.0,
+  "top_crimes": [
+   "CRIMINAL_CONSPIRACY",
+   "ARMS_ACT",
+   "CYBER_FRAUD",
+   "DACOITY"
+  ],
+  "top_states": [
+   "Assam",
+   "Jammu and Kashmir"
+  ],
+  "role_mix": {
+   "-": 2
+  },
+  "dominant_recorded_syndicate": "-",
+  "purity": 1.0,
+  "likely_leaders": [
+   {
+    "person_id": "P001472",
+    "name": "Karthik Mudaliar"
+   },
+   {
+    "person_id": "P001345",
+    "name": "Bimal Halder"
+   }
+  ]
+ },
+ {
+  "community": 27,
+  "size": 2,
+  "avg_risk": 6.5,
+  "top_crimes": [
+   "FORGERY",
+   "ARMS_ACT",
+   "DACOITY",
+   "ILLEGAL_MINING"
+  ],
+  "top_states": [
+   "Uttar Pradesh",
+   "Haryana"
+  ],
+  "role_mix": {
+   "-": 2
+  },
+  "dominant_recorded_syndicate": "-",
+  "purity": 1.0,
+  "likely_leaders": [
+   {
+    "person_id": "P001244",
+    "name": "Velu Pillai"
+   },
+   {
+    "person_id": "P001112",
+    "name": "Anita Tiwari"
+   }
+  ]
+ },
+ {
+  "community": 28,
+  "size": 2,
+  "avg_risk": 7.5,
+  "top_crimes": [
+   "ARMS_ACT",
+   "MONEY_LAUNDERING",
+   "NDPS_POSSESSION",
+   "NDPS_TRAFFICKING"
+  ],
+  "top_states": [
+   "Uttar Pradesh",
+   "Chhattisgarh"
+  ],
+  "role_mix": {
+   "-": 2
+  },
+  "dominant_recorded_syndicate": "-",
+  "purity": 1.0,
+  "likely_leaders": [
+   {
+    "person_id": "P001404",
+    "name": "Vijaya Setty"
+   },
+   {
+    "person_id": "P001169",
+    "name": "Seema Bhadauria"
+   }
+  ]
+ }
+]
