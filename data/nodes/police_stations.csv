@@ -1,0 +1,126 @@
+ps_id,ps_name,short_name,city,state,jurisdiction_location_id
+PS000001,Dongri Police Station,Dongri,Mumbai,Maharashtra,LOC000001
+PS000002,Dharavi Police Station,Dharavi,Mumbai,Maharashtra,LOC000002
+PS000003,Kurla Police Station,Kurla,Mumbai,Maharashtra,LOC000003
+PS000004,Bhendi Bazaar Police Station,Bhendi Bazaar,Mumbai,Maharashtra,LOC000004
+PS000005,Andheri Police Station,Andheri,Mumbai,Maharashtra,LOC000005
+PS000006,Malad Police Station,Malad,Mumbai,Maharashtra,LOC000006
+PS000007,Mumbra Police Station,Mumbra,Thane,Maharashtra,LOC000007
+PS000008,Vashi Police Station,Vashi,Navi Mumbai,Maharashtra,LOC000008
+PS000009,Yerwada Police Station,Yerwada,Pune,Maharashtra,LOC000009
+PS000010,Kondhwa Police Station,Kondhwa,Pune,Maharashtra,LOC000010
+PS000011,Kamptee Police Station,Kamptee,Nagpur,Maharashtra,LOC000011
+PS000012,Panchavati Police Station,Panchavati,Nashik,Maharashtra,LOC000012
+PS000013,Cidco Police Station,Cidco,Aurangabad,Maharashtra,LOC000013
+PS000014,Barshi Police Station,Barshi,Solapur,Maharashtra,LOC000014
+PS000015,Chandni Chowk Police Station,Chandni Chowk,New Delhi,Delhi,LOC000015
+PS000016,Seelampur Police Station,Seelampur,New Delhi,Delhi,LOC000016
+PS000017,Jamia Nagar Police Station,Jamia Nagar,New Delhi,Delhi,LOC000017
+PS000018,Karol Bagh Police Station,Karol Bagh,New Delhi,Delhi,LOC000018
+PS000019,Najafgarh Police Station,Najafgarh,New Delhi,Delhi,LOC000019
+PS000020,Nangloi Police Station,Nangloi,New Delhi,Delhi,LOC000020
+PS000021,Sangam Vihar Police Station,Sangam Vihar,New Delhi,Delhi,LOC000021
+PS000022,Paharganj Police Station,Paharganj,New Delhi,Delhi,LOC000022
+PS000023,Aminabad Police Station,Aminabad,Lucknow,Uttar Pradesh,LOC000023
+PS000024,Chakeri Police Station,Chakeri,Kanpur,Uttar Pradesh,LOC000024
+PS000025,Lisari Gate Police Station,Lisari Gate,Meerut,Uttar Pradesh,LOC000025
+PS000026,Loni Police Station,Loni,Ghaziabad,Uttar Pradesh,LOC000026
+PS000027,Sector 63 Police Station,Sector 63,Noida,Uttar Pradesh,LOC000027
+PS000028,Chetganj Police Station,Chetganj,Varanasi,Uttar Pradesh,LOC000028
+PS000029,Rajghat Police Station,Rajghat,Gorakhpur,Uttar Pradesh,LOC000029
+PS000030,Dhoomanganj Police Station,Dhoomanganj,Prayagraj,Uttar Pradesh,LOC000030
+PS000031,Kutba Police Station,Kutba,Muzaffarnagar,Uttar Pradesh,LOC000031
+PS000032,Baradari Police Station,Baradari,Bareilly,Uttar Pradesh,LOC000032
+PS000033,Sarai Mir Police Station,Sarai Mir,Azamgarh,Uttar Pradesh,LOC000033
+PS000034,Line Bazaar Police Station,Line Bazaar,Jaunpur,Uttar Pradesh,LOC000034
+PS000035,Kadamkuan Police Station,Kadamkuan,Patna,Bihar,LOC000035
+PS000036,Kasim Bazaar Police Station,Kasim Bazaar,Munger,Bihar,LOC000036
+PS000037,Mithanpura Police Station,Mithanpura,Muzaffarpur,Bihar,LOC000037
+PS000038,Chandauti Police Station,Chandauti,Gaya,Bihar,LOC000038
+PS000039,Mahadeva Police Station,Mahadeva,Siwan,Bihar,LOC000039
+PS000040,Barauni Police Station,Barauni,Begusarai,Bihar,LOC000040
+PS000041,Khajanchi Hat Police Station,Khajanchi Hat,Purnia,Bihar,LOC000041
+PS000042,Karmatanr Police Station,Karmatanr,Jamtara,Jharkhand,LOC000042
+PS000043,Sarwan Police Station,Sarwan,Deoghar,Jharkhand,LOC000043
+PS000044,Jharia Police Station,Jharia,Dhanbad,Jharkhand,LOC000044
+PS000045,Hatia Police Station,Hatia,Ranchi,Jharkhand,LOC000045
+PS000046,Bengabad Police Station,Bengabad,Giridih,Jharkhand,LOC000046
+PS000047,Metiabruz Police Station,Metiabruz,Kolkata,West Bengal,LOC000047
+PS000048,Rajabazar Police Station,Rajabazar,Kolkata,West Bengal,LOC000048
+PS000049,Kaliachak Police Station,Kaliachak,Malda,West Bengal,LOC000049
+PS000050,Jalangi Police Station,Jalangi,Murshidabad,West Bengal,LOC000050
+PS000051,Bongaon Police Station,Bongaon,North 24 Parganas,West Bengal,LOC000051
+PS000052,Matigara Police Station,Matigara,Siliguri,West Bengal,LOC000052
+PS000053,Karimpur Police Station,Karimpur,Nadia,West Bengal,LOC000053
+PS000054,Ajnala Police Station,Ajnala,Amritsar,Punjab,LOC000054
+PS000055,Khalra Police Station,Khalra,Tarn Taran,Punjab,LOC000055
+PS000056,Jamalpur Police Station,Jamalpur,Ludhiana,Punjab,LOC000056
+PS000057,Mamdot Police Station,Mamdot,Ferozepur,Punjab,LOC000057
+PS000058,Nakodar Police Station,Nakodar,Jalandhar,Punjab,LOC000058
+PS000059,Rampura Phul Police Station,Rampura Phul,Bathinda,Punjab,LOC000059
+PS000060,Punhana Police Station,Punhana,Nuh,Haryana,LOC000060
+PS000061,Sohna Police Station,Sohna,Gurugram,Haryana,LOC000061
+PS000062,Gohana Police Station,Gohana,Sonipat,Haryana,LOC000062
+PS000063,Barwala Police Station,Barwala,Hisar,Haryana,LOC000063
+PS000064,Ballabgarh Police Station,Ballabgarh,Faridabad,Haryana,LOC000064
+PS000065,Osian Police Station,Osian,Jodhpur,Rajasthan,LOC000065
+PS000066,Nokha Police Station,Nokha,Bikaner,Rajasthan,LOC000066
+PS000067,Chomu Police Station,Chomu,Jaipur,Rajasthan,LOC000067
+PS000068,Kaman Police Station,Kaman,Bharatpur,Rajasthan,LOC000068
+PS000069,Ramgarh Police Station,Ramgarh,Alwar,Rajasthan,LOC000069
+PS000070,Chohtan Police Station,Chohtan,Barmer,Rajasthan,LOC000070
+PS000071,Juhapura Police Station,Juhapura,Ahmedabad,Gujarat,LOC000071
+PS000072,Varachha Police Station,Varachha,Surat,Gujarat,LOC000072
+PS000073,Mundra Police Station,Mundra,Kutch,Gujarat,LOC000073
+PS000074,Kutiyana Police Station,Kutiyana,Porbandar,Gujarat,LOC000074
+PS000075,Gondal Police Station,Gondal,Rajkot,Gujarat,LOC000075
+PS000076,Karelibaug Police Station,Karelibaug,Vadodara,Gujarat,LOC000076
+PS000077,Bairagarh Police Station,Bairagarh,Bhopal,Madhya Pradesh,LOC000077
+PS000078,Rau Police Station,Rau,Indore,Madhya Pradesh,LOC000078
+PS000079,Sanawad Police Station,Sanawad,Khargone,Madhya Pradesh,LOC000079
+PS000080,Morar Police Station,Morar,Gwalior,Madhya Pradesh,LOC000080
+PS000081,Mehgaon Police Station,Mehgaon,Bhind,Madhya Pradesh,LOC000081
+PS000082,Gorakhpur Police Station,Gorakhpur,Jabalpur,Madhya Pradesh,LOC000082
+PS000083,Charminar Police Station,Charminar,Hyderabad,Telangana,LOC000083
+PS000084,Kukatpally Police Station,Kukatpally,Hyderabad,Telangana,LOC000084
+PS000085,Chandrayangutta Police Station,Chandrayangutta,Hyderabad,Telangana,LOC000085
+PS000086,Hanamkonda Police Station,Hanamkonda,Warangal,Telangana,LOC000086
+PS000087,Bodhan Police Station,Bodhan,Nizamabad,Telangana,LOC000087
+PS000088,Gajuwaka Police Station,Gajuwaka,Visakhapatnam,Andhra Pradesh,LOC000088
+PS000089,Gunadala Police Station,Gunadala,Vijayawada,Andhra Pradesh,LOC000089
+PS000090,Mangalagiri Police Station,Mangalagiri,Guntur,Andhra Pradesh,LOC000090
+PS000091,Nandyal Police Station,Nandyal,Kurnool,Andhra Pradesh,LOC000091
+PS000092,Chintapalli Police Station,Chintapalli,Alluri Sitharama Raju,Andhra Pradesh,LOC000092
+PS000093,Vyasarpadi Police Station,Vyasarpadi,Chennai,Tamil Nadu,LOC000093
+PS000094,Kodungaiyur Police Station,Kodungaiyur,Chennai,Tamil Nadu,LOC000094
+PS000095,Melur Police Station,Melur,Madurai,Tamil Nadu,LOC000095
+PS000096,Ukkadam Police Station,Ukkadam,Coimbatore,Tamil Nadu,LOC000096
+PS000097,Palayamkottai Police Station,Palayamkottai,Tirunelveli,Tamil Nadu,LOC000097
+PS000098,Srirangam Police Station,Srirangam,Trichy,Tamil Nadu,LOC000098
+PS000099,KG Halli Police Station,KG Halli,Bengaluru,Karnataka,LOC000099
+PS000100,Yeshwanthpur Police Station,Yeshwanthpur,Bengaluru,Karnataka,LOC000100
+PS000101,Ullal Police Station,Ullal,Mangaluru,Karnataka,LOC000101
+PS000102,Afzalpur Police Station,Afzalpur,Kalaburagi,Karnataka,LOC000102
+PS000103,Sandur Police Station,Sandur,Ballari,Karnataka,LOC000103
+PS000104,Mattancherry Police Station,Mattancherry,Kochi,Kerala,LOC000104
+PS000105,Tirur Police Station,Tirur,Malappuram,Kerala,LOC000105
+PS000106,Nadakkavu Police Station,Nadakkavu,Kozhikode,Kerala,LOC000106
+PS000107,Chavakkad Police Station,Chavakkad,Thrissur,Kerala,LOC000107
+PS000108,Thalassery Police Station,Thalassery,Kannur,Kerala,LOC000108
+PS000109,Nayapalli Police Station,Nayapalli,Bhubaneswar,Odisha,LOC000109
+PS000110,Jagatpur Police Station,Jagatpur,Cuttack,Odisha,LOC000110
+PS000111,Chitrakonda Police Station,Chitrakonda,Malkangiri,Odisha,LOC000111
+PS000112,Berhampur Police Station,Berhampur,Ganjam,Odisha,LOC000112
+PS000113,Paltan Bazaar Police Station,Paltan Bazaar,Guwahati,Assam,LOC000113
+PS000114,Golakganj Police Station,Golakganj,Dhubri,Assam,LOC000114
+PS000115,Sutarkandi Police Station,Sutarkandi,Karimganj,Assam,LOC000115
+PS000116,Moreh Police Station,Moreh,Imphal,Manipur,LOC000116
+PS000117,Tuibong Police Station,Tuibong,Churachandpur,Manipur,LOC000117
+PS000118,Anjuna Police Station,Anjuna,North Goa,Goa,LOC000118
+PS000119,Vasco Police Station,Vasco,South Goa,Goa,LOC000119
+PS000120,Maisuma Police Station,Maisuma,Srinagar,Jammu and Kashmir,LOC000120
+PS000121,Uri Police Station,Uri,Baramulla,Jammu and Kashmir,LOC000121
+PS000122,Birgaon Police Station,Birgaon,Raipur,Chhattisgarh,LOC000122
+PS000123,Bhairamgarh Police Station,Bhairamgarh,Bijapur,Chhattisgarh,LOC000123
+PS000124,Clement Town Police Station,Clement Town,Dehradun,Uttarakhand,LOC000124
+PS000125,Jwalapur Police Station,Jwalapur,Haridwar,Uttarakhand,LOC000125

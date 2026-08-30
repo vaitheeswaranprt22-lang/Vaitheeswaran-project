@@ -1,0 +1,23 @@
+person_id,name,alias,role,home_syndicate,bridged_syndicates,bridge_type,why_it_matters
+P000218,Haroon Baig,,TECH_HANDLER,SYN-CYB,SYN-FIC,OPERATIONAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000331,Shakeel Ansari,Shakeel Chikna,HAWALA_OPERATOR,SYN-HAW,SYN-BET,FINANCIAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000255,Lekhraj Dixit,Lekhraj Anna,TECH_HANDLER,SYN-CYB,SYN-WLD,OPERATIONAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000783,Firoz Siddiqui,,FINANCIER,SYN-KDN,SYN-BET|SYN-HER|SYN-VEH,FINANCIAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000042,Trupti Rabari,Trupti Kaana,LOGISTICS,SYN-EXT,SYN-HAW,OPERATIONAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000097,Manpreet Sekhon,Nanha,HAWALA_OPERATOR,SYN-HER,SYN-BET|SYN-GAN|SYN-KDN,FINANCIAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000321,Vipul Chauhan,,HAWALA_OPERATOR,SYN-HAW,SYN-KDN|SYN-PON,FINANCIAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000479,Balbir Baghel,,LOGISTICS,SYN-ARM,SYN-PON,OPERATIONAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000490,Ashok Verma,Kallu Ashok,CORRUPT_OFFICIAL,SYN-ARM,SYN-HAW,OPERATIONAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000007,Bhaskar Kamble,,LOGISTICS,SYN-EXT,SYN-CYB|SYN-HER|SYN-WLD,OPERATIONAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000585,Iqbal Hussain,Iqbal Chacha,FIXER,SYN-FIC,SYN-WLD,OPERATIONAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000209,Nadeem Rahman,Chikna Nadeem,TECH_HANDLER,SYN-CYB,SYN-ARM|SYN-BET|SYN-EXT,OPERATIONAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000108,Ranveer Kumawat,,LOGISTICS,SYN-HER,SYN-ARM|SYN-BET|SYN-CYB,OPERATIONAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000002,Shabana Baig,Kallu Shabana,FENCE,SYN-EXT,SYN-BET|SYN-KDN,OPERATIONAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000738,Dharmesh Joshi,,FINANCIER,SYN-BET,SYN-SHK,FINANCIAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000258,Subhas Roy,Subhas Chhota,TECH_HANDLER,SYN-CYB,SYN-BET|SYN-HAW,OPERATIONAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000366,Har Prasad Yadav,,LOGISTICS,SYN-MIN,SYN-PON|SYN-VEH|SYN-WLD,OPERATIONAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000598,Tanveer Siddiqui,,LOGISTICS,SYN-FIC,SYN-MIN,OPERATIONAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000425,Nirmal Chakraborty,Nirmal Raja,TECH_HANDLER,SYN-TRF,SYN-GAN,OPERATIONAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000381,Perumal Subramanian,,CORRUPT_OFFICIAL,SYN-MIN,SYN-EXT|SYN-VEH,OPERATIONAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000178,Udaiveer Saini,Udaiveer Master,FIXER,SYN-CYB,SYN-BET|SYN-TRF,OPERATIONAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
+P000332,Shibu Thomas,Dada Shibu,FINANCIER,SYN-HAW,SYN-TRF,FINANCIAL_CONDUIT,High betweenness centrality; removal fragments the inter-syndicate component.
